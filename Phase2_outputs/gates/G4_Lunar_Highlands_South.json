@@ -1,0 +1,20 @@
+{
+  "gate": "G4_PRESENT_audit",
+  "scene": "Lunar Highlands South",
+  "pass": true,
+  "present_groups": [
+    "Low-Ca Pyroxene",
+    "High-Ca Pyroxene",
+    "Plagioclase"
+  ],
+  "present_strong": [
+    "Plagioclase"
+  ],
+  "present_weak": [
+    "Low-Ca Pyroxene",
+    "High-Ca Pyroxene"
+  ],
+  "overall_verdict": "MODERATE",
+  "mixture_qa": "PASS",
+  "reasons": []
+}

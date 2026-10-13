@@ -1,0 +1,17 @@
+{
+  "gate": "G1_Library_QC",
+  "pass": true,
+  "n_spectra": 83,
+  "min_required": 40,
+  "family_counts": {
+    "Plagioclase": 20,
+    "HCP": 19,
+    "Ilmenite": 7,
+    "Olivine": 19,
+    "LCP": 18
+  },
+  "core_families_ok": true,
+  "relab": 19,
+  "usgs": 64,
+  "reasons": []
+}

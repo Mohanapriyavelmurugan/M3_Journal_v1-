@@ -1,0 +1,8 @@
+{
+  "gate": "G0_Scene_READY",
+  "scene": "Lunar Highlands South",
+  "pass": true,
+  "reasons": [],
+  "fname": "M3G20090205T153710_V01_RFL",
+  "denoised": "D:\\Journal\\M3 Journal\\Lunar Highlands South\\Pipeline_outputs\\04_denoised\\M3G20090205T153710_V01_RFL_denoised.npy"
+}

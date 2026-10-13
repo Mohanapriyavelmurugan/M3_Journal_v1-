@@ -1,0 +1,221 @@
+{
+  "scene": "Mare Tranquillitatis",
+  "fname": "M3G20090203T160452_V01_RFL",
+  "n_bands": 85,
+  "method_version": "depth_v2g_clusters",
+  "cr_method": "continuum_removal_match",
+  "minerals": {
+    "Olivine": {
+      "present": true,
+      "present_level": "PRESENT",
+      "confidence": "strong",
+      "spm_index": "OLINDEX3",
+      "thr_adaptive": 0.02229646034538746,
+      "n_hot_pixels": 566869,
+      "hot_frac": 0.10000003528153252,
+      "proof_depth_key": "d1.05",
+      "band_depths_hot": {
+        "d1.05": 0.03875907186124172
+      },
+      "band_depths_bland": {
+        "d1.05": 0.01702436122933615
+      },
+      "hot_minus_bland": 0.021734710631905574,
+      "best_library": "RELAB_olivine_005",
+      "best_family": "Olivine",
+      "best_sam": 0.04407646799008587,
+      "pyx_ol_diagnostic": {
+        "d1um": 0.03875907186124172,
+        "d1um_source": "refl",
+        "d2um_lcp": 0.004003858767919755,
+        "d2um_hcp": 0.020503839615029107,
+        "d2_over_d1": 0.5289938493517603
+      },
+      "olivine_mixture_flag": "pyx_mixed",
+      "gates": {
+        "hot_ok": true,
+        "depth_ok": true,
+        "hmb_ok": true,
+        "lib_ok": true,
+        "spm_enabled": true,
+        "pyx_2um_support": true,
+        "pyx_support_reason": "n/a",
+        "pyx_support_grade": "n/a"
+      }
+    },
+    "Low-Ca Pyroxene": {
+      "present": true,
+      "present_level": "PRESENT",
+      "confidence": "strong",
+      "spm_index": "LCPINDEX2",
+      "thr_adaptive": 0.011106962338089943,
+      "n_hot_pixels": 566869,
+      "hot_frac": 0.10000003528153252,
+      "proof_depth_key": "d1.90",
+      "band_depths_hot": {
+        "d1.90": 0.009295380307269174
+      },
+      "band_depths_bland": {
+        "d1.90": -0.0016597368730404405
+      },
+      "hot_minus_bland": 0.010955117180309615,
+      "best_library": "USGS_s07_M3t_Pigeonite_HS199.1B_ASDFRb_AREF",
+      "best_family": "LCP",
+      "best_sam": 0.033025501649656674,
+      "pyx_ol_diagnostic": {
+        "d1um": 0.005516601839773871,
+        "d1um_source": "cr_fallback",
+        "d2um_lcp": 0.009295380307269174,
+        "d2um_hcp": 0.007915929828019141,
+        "d2_over_d1": 1.684677614876634
+      },
+      "olivine_mixture_flag": null,
+      "gates": {
+        "hot_ok": true,
+        "depth_ok": true,
+        "hmb_ok": true,
+        "lib_ok": true,
+        "spm_enabled": true,
+        "pyx_2um_support": true,
+        "pyx_support_reason": "strong_ratio_or_abs_d2",
+        "pyx_support_grade": "strong"
+      }
+    },
+    "High-Ca Pyroxene": {
+      "present": true,
+      "present_level": "PRESENT",
+      "confidence": "strong",
+      "spm_index": "HCPINDEX2",
+      "thr_adaptive": 0.015803854912519455,
+      "n_hot_pixels": 566870,
+      "hot_frac": 0.1000002116891951,
+      "proof_depth_key": "d2.25",
+      "band_depths_hot": {
+        "d2.25": 0.019207333530994908
+      },
+      "band_depths_bland": {
+        "d2.25": 0.001998791563016744
+      },
+      "hot_minus_bland": 0.017208541967978164,
+      "best_library": "USGS_s07_M3t_Diopside_HS317.2B_(Cr)Pyx_ASDFRc_AREF",
+      "best_family": "HCP",
+      "best_sam": 0.034243326961533725,
+      "pyx_ol_diagnostic": {
+        "d1um": 0.03675439660567725,
+        "d1um_source": "cr_fallback",
+        "d2um_lcp": 0.0019654684175222092,
+        "d2um_hcp": 0.019207333530994908,
+        "d2_over_d1": 0.5225717936622165
+      },
+      "olivine_mixture_flag": null,
+      "gates": {
+        "hot_ok": true,
+        "depth_ok": true,
+        "hmb_ok": true,
+        "lib_ok": true,
+        "spm_enabled": true,
+        "pyx_2um_support": true,
+        "pyx_support_reason": "strong_ratio_or_abs_d2",
+        "pyx_support_grade": "strong"
+      }
+    },
+    "Plagioclase": {
+      "present": true,
+      "present_level": "PRESENT",
+      "confidence": "strong",
+      "spm_index": "BD1250",
+      "thr_adaptive": 0.005,
+      "n_hot_pixels": 205925,
+      "hot_frac": 0.03632674791768395,
+      "proof_depth_key": "d1.25",
+      "band_depths_hot": {
+        "d1.25": 0.009300257384386446
+      },
+      "band_depths_bland": {
+        "d1.25": -0.012369403990418748
+      },
+      "hot_minus_bland": 0.021669661374805194,
+      "best_library": "USGS_s07_M3t_Albite_HS66.1B_Plagioclase_ASDFRc_AREF",
+      "best_family": "Plagioclase",
+      "best_sam": 0.02415267248862769,
+      "pyx_ol_diagnostic": {
+        "d1um": 0.002922682325379844,
+        "d1um_source": "cr_fallback",
+        "d2um_lcp": 0.0022862435389094937,
+        "d2um_hcp": 0.007397865917227575,
+        "d2_over_d1": 2.530324807523829
+      },
+      "olivine_mixture_flag": null,
+      "gates": {
+        "hot_ok": true,
+        "depth_ok": true,
+        "hmb_ok": true,
+        "lib_ok": true,
+        "spm_enabled": true,
+        "pyx_2um_support": true,
+        "pyx_support_reason": "n/a",
+        "pyx_support_grade": "n/a"
+      }
+    },
+    "Ilmenite": {
+      "present": false,
+      "present_level": "ABSENT",
+      "confidence": "none",
+      "spm_index": "R750",
+      "thr_adaptive": 0.05,
+      "n_hot_pixels": 3059490,
+      "hot_frac": 0.5397174796002179,
+      "proof_depth_key": "d1.00",
+      "band_depths_hot": {
+        "d1.00": 0.0120699446408018
+      },
+      "band_depths_bland": {
+        "d1.00": 0.015148528755792534
+      },
+      "hot_minus_bland": -0.0030785841149907345,
+      "best_library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+      "best_family": "Ilmenite",
+      "best_sam": 0.02420641654442093,
+      "pyx_ol_diagnostic": {
+        "d1um": 0.018693383167920907,
+        "d1um_source": "cr_fallback",
+        "d2um_lcp": 0.0030044651097623776,
+        "d2um_hcp": 0.0089795104934971,
+        "d2_over_d1": 0.480332002015756
+      },
+      "olivine_mixture_flag": null,
+      "gates": {
+        "hot_ok": false,
+        "depth_ok": true,
+        "hmb_ok": false,
+        "lib_ok": true,
+        "spm_enabled": false,
+        "pyx_2um_support": true,
+        "pyx_support_reason": "n/a",
+        "pyx_support_grade": "n/a"
+      }
+    }
+  },
+  "n_present": 4,
+  "present_strong": [
+    "Olivine",
+    "Low-Ca Pyroxene",
+    "High-Ca Pyroxene",
+    "Plagioclase"
+  ],
+  "present_weak": [],
+  "n_clusters": 4,
+  "clustering_status": "PASS",
+  "overall_verdict": "STRONG",
+  "map_available": true,
+  "mixture_secondary": {
+    "olivine_mean": 0.3773290039971471,
+    "pyroxene_mean_LCP_plus_HCP": 0.5753462808206677,
+    "plagioclase_mean": 0.04732470214366913,
+    "olivine_fraction_of_mafic": 0.3960730440367992,
+    "pyroxene_fraction_of_mafic": 0.6039269454664449,
+    "note": "Soft mixture context from unmixer on training pixels only."
+  },
+  "mixture_qa": "PASS",
+  "note": "PRESENT = hotspot+depth+hot-bland(+SAM). PRESENT_WEAK = pyroxene with abs-2\u00b5m only (1\u00b5m non-positive). Unmixer mixture is secondary and constrained to PRESENT families. HDBSCAN maps are informational and do not change PRESENT verdict."
+}

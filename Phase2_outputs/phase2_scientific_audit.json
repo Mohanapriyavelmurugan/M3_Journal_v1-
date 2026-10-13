@@ -1,0 +1,19 @@
+[
+  {
+    "scene": "Copernicus Crater",
+    "loo_cr": 0.725609756097561,
+    "loo_depth": 0.7439024390243902,
+    "loo_centred": 0.725609756097561,
+    "loo_raw": 0.725609756097561,
+    "median_best_sam": 0.16553439312738444,
+    "median_best_sam_shuffled": 0.37386345503887947,
+    "median_sam_flat": 0.16892955951503102,
+    "frac_better_than_flat": 0.1814,
+    "class_gap_lt_0.01": 0.9184,
+    "label_flip_1pct_noise": 0.031100000000000017,
+    "bd1000_median": 0.06782156229019165,
+    "bd2000_median": 0.003925025463104248,
+    "bd1000_p90": 0.11393128335475922,
+    "bd2000_p90": 0.02256752923130989
+  }
+]

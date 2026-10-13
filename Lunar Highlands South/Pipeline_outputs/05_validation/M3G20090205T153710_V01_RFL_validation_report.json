@@ -1,0 +1,186 @@
+{
+  "fname": "M3G20090205T153710_V01_RFL",
+  "cube_shape": [
+    9948,
+    304,
+    85
+  ],
+  "valid_bands": 83,
+  "dead_bands": 2,
+  "metric1_snr": {
+    "mean_improvement_pct": 0.7447029905985904,
+    "max_improvement_pct": 2.721994828748587,
+    "min_improvement_pct": -0.9323434300809538,
+    "bands_passing": 81,
+    "bands_total": 83,
+    "mean_snr_raw": 17.46088374953672,
+    "mean_snr_physics": 17.509801359061736,
+    "mean_snr_ml": 17.58927754775207
+  },
+  "metric2_sam": {
+    "mean_sam_rad": 0.01169137242633544,
+    "median_sam_rad": 0.008847937448298477,
+    "p95_sam_rad": 0.0265910351029179,
+    "mean_sam_deg": 0.6698662967446456,
+    "pct_pass": 99.43333333333332,
+    "pct_review": 0.5466666666666666,
+    "pct_fail": 0.02,
+    "n_sampled": 15000,
+    "thresholds": {
+      "pass": 0.05,
+      "review": 0.1
+    }
+  },
+  "metric3_band_depth": {
+    "BD2300": {
+      "mineral": "Phyllosilicates",
+      "bd_original": 0.003327296246787716,
+      "bd_denoised": 0.003330011988562397,
+      "change_pct": null,
+      "status": "N/A",
+      "reason": "feature not detected (bd<0.015)"
+    },
+    "BD1900": {
+      "mineral": "Hydrated minerals",
+      "bd_original": -0.0011390195557755014,
+      "bd_denoised": -0.001446729632052549,
+      "change_pct": null,
+      "status": "N/A",
+      "reason": "feature not detected (bd<0.015)"
+    },
+    "BD2210": {
+      "mineral": "Al-OH clays",
+      "bd_original": 0.0016497713409015131,
+      "bd_denoised": 0.0014155617072805567,
+      "change_pct": null,
+      "status": "N/A",
+      "reason": "feature not detected (bd<0.015)"
+    },
+    "SINDEX2": {
+      "mineral": "Sulfates",
+      "bd_original": 0.008625480555897902,
+      "bd_denoised": 0.0067616829115950995,
+      "change_pct": null,
+      "status": "N/A",
+      "reason": "feature not detected (bd<0.015)"
+    },
+    "BD1500": {
+      "mineral": "Water ice",
+      "bd_original": -0.0019141548068203804,
+      "bd_denoised": -0.0015287503162166145,
+      "change_pct": null,
+      "status": "N/A",
+      "reason": "feature not detected (bd<0.015)"
+    },
+    "HCPINDEX2": {
+      "mineral": "HCP pyroxene",
+      "bd_original": 0.010454515216858676,
+      "bd_denoised": 0.009303860608780062,
+      "change_pct": null,
+      "status": "N/A",
+      "reason": "feature not detected (bd<0.015)"
+    }
+  },
+  "metric4_pearson": {
+    "mean_r": 0.9992583066567012,
+    "pass_fraction": 0.9995,
+    "threshold": 0.98,
+    "n_sampled": 2000
+  },
+  "roi_validation": {
+    "BD2300": {
+      "mineral": "Phyllosilicates",
+      "status": "PASS",
+      "roi_pixels": 2290,
+      "roi_threshold": 0.051196949303039765,
+      "sampled_pixels": 2290,
+      "bd_original": 0.08878130064447748,
+      "bd_denoised": 0.08375163391879212,
+      "change_pct": -5.665232080600551,
+      "mean_sam_deg": 3.3842396175797105,
+      "mean_pearson": 0.9509608495236587
+    },
+    "BD1900": {
+      "mineral": "Hydrated minerals",
+      "status": "REVIEW",
+      "roi_pixels": 1270,
+      "roi_threshold": 0.06278673440788693,
+      "sampled_pixels": 1270,
+      "bd_original": 0.10384867217726124,
+      "bd_denoised": 0.08220514919675131,
+      "change_pct": -20.84140560176464,
+      "mean_sam_deg": 3.1681297612329167,
+      "mean_pearson": 0.9518901481072963
+    },
+    "BD2210": {
+      "mineral": "Al-OH clays",
+      "status": "PASS",
+      "roi_pixels": 2647,
+      "roi_threshold": 0.06311828723852081,
+      "sampled_pixels": 2647,
+      "bd_original": 0.13781758674773306,
+      "bd_denoised": 0.11654655178021812,
+      "change_pct": -15.434194916248467,
+      "mean_sam_deg": 2.6765906309131604,
+      "mean_pearson": 0.9708661517312688
+    },
+    "SINDEX2": {
+      "mineral": "Sulfates",
+      "status": "PASS",
+      "roi_pixels": 12163,
+      "roi_threshold": 0.029440841915085614,
+      "sampled_pixels": 5000,
+      "bd_original": 0.048932193469033346,
+      "bd_denoised": 0.03990130675728799,
+      "change_pct": -18.455920471786207,
+      "mean_sam_deg": 1.6351344315444198,
+      "mean_pearson": 0.9832883807263891
+    },
+    "BD1500": {
+      "mineral": "Water ice",
+      "status": "PASS",
+      "roi_pixels": 7309,
+      "roi_threshold": 0.0436062857152675,
+      "sampled_pixels": 5000,
+      "bd_original": 0.0695915077990097,
+      "bd_denoised": 0.06348403861061269,
+      "change_pct": -8.776170227603433,
+      "mean_sam_deg": 1.4294967259241012,
+      "mean_pearson": 0.9874798700013444
+    },
+    "HCPINDEX2": {
+      "mineral": "HCP pyroxene",
+      "status": "PASS",
+      "roi_pixels": 37421,
+      "roi_threshold": 0.03134664402211509,
+      "sampled_pixels": 5000,
+      "bd_original": 0.039086180829236324,
+      "bd_denoised": 0.03558052965512113,
+      "change_pct": -8.969029717769148,
+      "mean_sam_deg": 1.2881757017028928,
+      "mean_pearson": 0.9943326249204111
+    }
+  },
+  "metric5_noise": {
+    "N1_Gaussian": "N/A",
+    "N2_Stripe": 39.439673343863475,
+    "N3_Spikes": "N/A",
+    "N4_Thermal": 23.85435775379168,
+    "N5_Smile": 100.0
+  },
+  "band_decisions": {
+    "PASS": 81,
+    "REVIEW": 0,
+    "FAIL": 2,
+    "pct_pass": 97.59036144578313
+  },
+  "overall_verdict": "PASS",
+  "figures": {
+    "fig1": "D:\\M3 Journal\\Lunar Highlands South\\Pipeline_outputs\\05_validation\\M3G20090205T153710_V01_RFL_fig1_snr_comparison.png",
+    "fig2": "D:\\M3 Journal\\Lunar Highlands South\\Pipeline_outputs\\05_validation\\M3G20090205T153710_V01_RFL_fig2_sam_map.png",
+    "fig3": "D:\\M3 Journal\\Lunar Highlands South\\Pipeline_outputs\\05_validation\\M3G20090205T153710_V01_RFL_fig3_band_depth.png",
+    "fig4": "D:\\M3 Journal\\Lunar Highlands South\\Pipeline_outputs\\05_validation\\M3G20090205T153710_V01_RFL_fig4_noise_suppression.png",
+    "fig5": "D:\\M3 Journal\\Lunar Highlands South\\Pipeline_outputs\\05_validation\\M3G20090205T153710_V01_RFL_fig5_spectra_gallery.png",
+    "fig6": "D:\\M3 Journal\\Lunar Highlands South\\Pipeline_outputs\\05_validation\\M3G20090205T153710_V01_RFL_fig6_spatial.png"
+  }
+}

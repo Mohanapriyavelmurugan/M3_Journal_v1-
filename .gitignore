@@ -1,0 +1,32 @@
+# OS / editor
+.cursor/
+Thumbs.db
+Desktop.ini
+__pycache__/
+*.pyc
+.DS_Store
+*.tmp
+*.log
+
+# Raw M3 products (multi-GB)
+**/*.IMG
+**/*.img
+**/*.HDR
+**/*.hdr
+**/*_L2.LBL
+**/*.LBL
+
+# Large pipeline arrays (GitHub 100 MB limit)
+**/Pipeline_outputs/03_physics/**/*.npy
+**/Pipeline_outputs/04_denoised/**/*.npy
+**/Pipeline_outputs/06_mineral_id/cube_cr.npy
+**/Pipeline_outputs/06_mineral_id/spm_map.npy
+**/Pipeline_outputs/06_mineral_id/spm_active_mask.npy
+**/Pipeline_outputs/06_mineral_id/latent_vectors.npy
+**/Pipeline_outputs/06_mineral_id/latent_coords.npy
+
+# Any other oversized binaries
+*.zip
+*.7z
+*.tar
+*.tar.gz

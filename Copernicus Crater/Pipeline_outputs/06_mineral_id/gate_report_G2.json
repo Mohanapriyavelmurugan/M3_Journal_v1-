@@ -1,0 +1,13 @@
+{
+  "gate": "G2_CR_SPM_sanity",
+  "scene": "Copernicus Crater",
+  "pass": true,
+  "enabled_indices": [
+    "OLINDEX3",
+    "LCPINDEX2",
+    "HCPINDEX2",
+    "BD1250"
+  ],
+  "active_frac": 0.255841990373452,
+  "reasons": []
+}

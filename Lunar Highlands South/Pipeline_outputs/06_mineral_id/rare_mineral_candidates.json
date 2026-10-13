@@ -1,0 +1,63 @@
+{
+  "scene": "Lunar Highlands South",
+  "method_version": "depth_v2g_clusters",
+  "candidates": {
+    "Ilmenite": {
+      "n_sam_hits_gated": 210,
+      "status": "CANDIDATE",
+      "terrain": "nonmare",
+      "spatial_max_cell": 11,
+      "spatial_ok": false,
+      "mare_only_present_rare": true,
+      "requires": "SAM + d1.00>=0.03 + hmb>=0.02 (n>=400, terrain=nonmare, spatial_cell>=20, PRESENT_RARE mare-only)",
+      "examples": [
+        {
+          "y": 5567,
+          "x": 268,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.023311720917886233,
+          "d1.00": 0.0420570292963538,
+          "hmb": 0.035595316109621855
+        },
+        {
+          "y": 64,
+          "x": 238,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.03530871658189994,
+          "d1.00": 0.0312760006768239,
+          "hmb": 0.024814287490091957
+        },
+        {
+          "y": 7973,
+          "x": 133,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.2B_ASDFRb_AREF",
+          "sam": 0.04951394987404876,
+          "d1.00": 0.032269536169656776,
+          "hmb": 0.025807822982924833
+        },
+        {
+          "y": 5619,
+          "x": 236,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.023943860798398064,
+          "d1.00": 0.034757656686151384,
+          "hmb": 0.02829594349941944
+        },
+        {
+          "y": 6232,
+          "x": 262,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.028514403189757613,
+          "d1.00": 0.09423567773794461,
+          "hmb": 0.08777396455121267
+        }
+      ]
+    },
+    "Spinel": {
+      "n_sam_hits": 0,
+      "status": "ABSENT",
+      "requires": "SAM only (no dedicated SPM yet) \u2014 not PRESENT_RARE",
+      "examples": []
+    }
+  }
+}

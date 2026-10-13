@@ -1,0 +1,154 @@
+{
+  "scene": "Jackson Crater",
+  "mode": "adapt",
+  "method_version": "depth_v2g_clusters",
+  "out_dir": "D:\\Journal\\M3 Journal\\Jackson Crater\\Pipeline_outputs\\06_mineral_id",
+  "gate0": {
+    "gate": "G0_Scene_READY",
+    "scene": "Jackson Crater",
+    "pass": true,
+    "reasons": [],
+    "fname": "M3G20081225T074420_V01_RFL",
+    "denoised": "D:\\Journal\\M3 Journal\\Jackson Crater\\Pipeline_outputs\\04_denoised\\M3G20081225T074420_V01_RFL_denoised.npy"
+  },
+  "gate1": {
+    "gate": "G1_Library_QC",
+    "pass": true,
+    "n_spectra": 83,
+    "min_required": 40,
+    "family_counts": {
+      "Plagioclase": 20,
+      "HCP": 19,
+      "Ilmenite": 7,
+      "Olivine": 19,
+      "LCP": 18
+    },
+    "core_families_ok": true,
+    "relab": 19,
+    "usgs": 64,
+    "reasons": []
+  },
+  "gate2": {
+    "gate": "G2_CR_SPM_sanity",
+    "scene": "Jackson Crater",
+    "pass": true,
+    "enabled_indices": [
+      "OLINDEX3",
+      "LCPINDEX2",
+      "HCPINDEX2",
+      "BD1250"
+    ],
+    "active_frac": 0.19753725394681487,
+    "reasons": []
+  },
+  "gate3": {
+    "gate": "G3_Encoder_QA",
+    "scene": "Jackson Crater",
+    "pass": true,
+    "n_encoded": 400000,
+    "reasons": []
+  },
+  "gate4": {
+    "gate": "G4_PRESENT_audit",
+    "scene": "Jackson Crater",
+    "pass": true,
+    "present_groups": [
+      "Low-Ca Pyroxene",
+      "High-Ca Pyroxene",
+      "Plagioclase"
+    ],
+    "present_strong": [
+      "Plagioclase"
+    ],
+    "present_weak": [
+      "Low-Ca Pyroxene",
+      "High-Ca Pyroxene"
+    ],
+    "overall_verdict": "MODERATE",
+    "mixture_qa": "PASS",
+    "reasons": []
+  },
+  "present": [
+    "Low-Ca Pyroxene",
+    "High-Ca Pyroxene",
+    "Plagioclase"
+  ],
+  "present_strong": [
+    "Plagioclase"
+  ],
+  "present_weak": [
+    "Low-Ca Pyroxene",
+    "High-Ca Pyroxene"
+  ],
+  "overall_verdict": "MODERATE",
+  "n_clusters": 2,
+  "clustering_status": "PASS",
+  "mixture_secondary": {
+    "olivine_mean": 0.0,
+    "pyroxene_mean_LCP_plus_HCP": 0.7263928735628724,
+    "plagioclase_mean": 0.2736071012914181,
+    "olivine_fraction_of_mafic": 0.0,
+    "pyroxene_fraction_of_mafic": 0.9999999862333452,
+    "note": "Soft mixture context from unmixer on training pixels only."
+  },
+  "mixture_qa": "PASS",
+  "rare": {
+    "Ilmenite": {
+      "n_sam_hits_gated": 39,
+      "status": "CANDIDATE",
+      "terrain": "nonmare",
+      "spatial_max_cell": 5,
+      "spatial_ok": false,
+      "mare_only_present_rare": true,
+      "requires": "SAM + d1.00>=0.03 + hmb>=0.02 (n>=400, terrain=nonmare, spatial_cell>=20, PRESENT_RARE mare-only)",
+      "examples": [
+        {
+          "y": 908,
+          "x": 265,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.4B_ASDFRb_AREF",
+          "sam": 0.033115859833320556,
+          "d1.00": 0.04549559069616316,
+          "hmb": 0.054303646793491644
+        },
+        {
+          "y": 1924,
+          "x": 124,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.03350070138334344,
+          "d1.00": 0.039891750171132445,
+          "hmb": 0.04869980626846093
+        },
+        {
+          "y": 851,
+          "x": 237,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.03970767822738273,
+          "d1.00": 0.04927754681738328,
+          "hmb": 0.058085602914711765
+        },
+        {
+          "y": 601,
+          "x": 249,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.4B_ASDFRb_AREF",
+          "sam": 0.04763759925223163,
+          "d1.00": 0.06424665312526723,
+          "hmb": 0.07305470922259572
+        },
+        {
+          "y": 1009,
+          "x": 172,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.031104191356666585,
+          "d1.00": 0.031355915407828006,
+          "hmb": 0.04016397150515649
+        }
+      ]
+    },
+    "Spinel": {
+      "n_sam_hits": 0,
+      "status": "ABSENT",
+      "requires": "SAM only (no dedicated SPM yet) \u2014 not PRESENT_RARE",
+      "examples": []
+    }
+  }
+}

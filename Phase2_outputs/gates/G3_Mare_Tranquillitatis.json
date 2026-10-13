@@ -1,0 +1,7 @@
+{
+  "gate": "G3_Encoder_QA",
+  "scene": "Mare Tranquillitatis",
+  "pass": true,
+  "n_encoded": 400000,
+  "reasons": []
+}

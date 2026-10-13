@@ -1,0 +1,8 @@
+{
+  "gate": "G0_Scene_READY",
+  "scene": "Jackson Crater",
+  "pass": true,
+  "reasons": [],
+  "fname": "M3G20081225T074420_V01_RFL",
+  "denoised": "D:\\Journal\\M3 Journal\\Jackson Crater\\Pipeline_outputs\\04_denoised\\M3G20081225T074420_V01_RFL_denoised.npy"
+}

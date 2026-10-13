@@ -1,0 +1,169 @@
+[
+  {
+    "scene": "Mare Tranquillitatis",
+    "fname": "M3G20090203T160452_V01_RFL",
+    "denoised_cube": "D:\\M3 Journal\\Mare Tranquillitatis\\Pipeline_outputs\\04_denoised\\M3G20090203T160452_V01_RFL_denoised.npy",
+    "output_dir": "D:\\M3 Journal\\Mare Tranquillitatis\\Pipeline_outputs\\07_mineral_workflow",
+    "models_trained": {
+      "spectral_encoder": "D:\\M3 Journal\\Mare Tranquillitatis\\Pipeline_outputs\\07_mineral_workflow\\models\\M3G20090203T160452_V01_RFL_encoder_depth_v5_shade_B85.pth",
+      "neural_unmixer": "D:\\M3 Journal\\Mare Tranquillitatis\\Pipeline_outputs\\07_mineral_workflow\\models\\M3G20090203T160452_V01_RFL_unmixer_depth_v5_shade_E7.pth"
+    },
+    "training_pool": {
+      "total_spectra": 19000,
+      "scene_samples": 12000,
+      "library_samples": 2000,
+      "synthetic_mixes": 5000
+    },
+    "library_entries": 102,
+    "library_sources": {
+      "relab": 16,
+      "usgs": 84,
+      "synthetic": 0
+    },
+    "endmembers": [
+      "orthopyroxene_lcp",
+      "clinopyroxene_hcp",
+      "olivine_forsterite",
+      "spinel",
+      "plagioclase_anorthite",
+      "featureless_bright",
+      "dark_mature"
+    ],
+    "rare_endmembers_included": [
+      "spinel"
+    ],
+    "scene_mineral_presence": [
+      {
+        "mineral": "featureless_bright",
+        "status": "PRESENT",
+        "mean_abundance_pct": 33.182350158691406,
+        "n_pixels_abund_ge_20": 5096080,
+        "sam_classified_pixels": 2338995
+      },
+      {
+        "mineral": "dark_mature",
+        "status": "PRESENT",
+        "mean_abundance_pct": 25.247865676879883,
+        "n_pixels_abund_ge_20": 4505186,
+        "sam_classified_pixels": 0
+      },
+      {
+        "mineral": "clinopyroxene_hcp",
+        "status": "PRESENT",
+        "mean_abundance_pct": 16.122127532958984,
+        "n_pixels_abund_ge_20": 2159831,
+        "sam_classified_pixels": 9699
+      },
+      {
+        "mineral": "orthopyroxene_lcp",
+        "status": "PRESENT",
+        "mean_abundance_pct": 16.00918197631836,
+        "n_pixels_abund_ge_20": 1528095,
+        "sam_classified_pixels": 85766
+      },
+      {
+        "mineral": "spinel",
+        "status": "PRESENT",
+        "mean_abundance_pct": 4.998059272766113,
+        "n_pixels_abund_ge_20": 246465,
+        "sam_classified_pixels": 174
+      },
+      {
+        "mineral": "plagioclase_anorthite",
+        "status": "PRESENT",
+        "mean_abundance_pct": 4.2814812660217285,
+        "n_pixels_abund_ge_20": 399713,
+        "sam_classified_pixels": 1579
+      },
+      {
+        "mineral": "olivine_forsterite",
+        "status": "PRESENT",
+        "mean_abundance_pct": 0.15893420577049255,
+        "n_pixels_abund_ge_20": 1617,
+        "sam_classified_pixels": 211
+      }
+    ],
+    "validation": {
+      "overall_verdict": "WEAK",
+      "clustering_method": "hdbscan",
+      "cluster_quality_score": -0.1329362541437149,
+      "physical_checks": {
+        "abundance_min": 0.0,
+        "abundance_max": 0.9436001181602478,
+        "mean_sum_to_one_error": 0.5128417015075684,
+        "mean_max_abundance": 0.38813968392127196,
+        "mean_reconstruction_error": 27.046422958374023,
+        "mean_shade_abundance": 0.38996315002441406,
+        "representation": "depth_v5_shade",
+        "pipeline_tag": "depth_v5_shade",
+        "dominant_excludes_components": true
+      },
+      "spm_detection_rows": [
+        {
+          "endmember": "orthopyroxene_lcp",
+          "top20_spm_assignment_pct": 13.502628302392896,
+          "mean_spm_assigned": 0.03274226561188698,
+          "pixel_fraction_pct": 30.455999553206553
+        },
+        {
+          "endmember": "clinopyroxene_hcp",
+          "top20_spm_assignment_pct": 68.10770607335598,
+          "mean_spm_assigned": 0.026277992874383926,
+          "pixel_fraction_pct": 44.90292095333584
+        },
+        {
+          "endmember": "olivine_forsterite",
+          "top20_spm_assignment_pct": 0.25429615995050986,
+          "mean_spm_assigned": 0.029117392376065254,
+          "pixel_fraction_pct": 0.07481847456007067
+        },
+        {
+          "endmember": "spinel",
+          "top20_spm_assignment_pct": 2.4376857887201204,
+          "mean_spm_assigned": 0.011384417302906513,
+          "pixel_fraction_pct": 9.86437055957277
+        },
+        {
+          "endmember": "featureless_bright",
+          "top20_spm_assignment_pct": 0.013583385226569102,
+          "mean_spm_assigned": 0.04740147292613983,
+          "pixel_fraction_pct": 0.24042600333622172
+        },
+        {
+          "endmember": "dark_mature",
+          "top20_spm_assignment_pct": 0.0,
+          "mean_spm_assigned": 0.0,
+          "pixel_fraction_pct": 0.0
+        }
+      ],
+      "mineral_fractions_pct": {
+        "orthopyroxene_lcp": 30.68580049586236,
+        "clinopyroxene_hcp": 47.50756543891502,
+        "olivine_forsterite": 0.06385957635894178,
+        "spinel": 9.87008751192467,
+        "plagioclase_anorthite": 11.605546962759753,
+        "featureless_bright": 0.2671400141792565
+      },
+      "mean_abundances_pct": {
+        "orthopyroxene_lcp": 16.00918197631836,
+        "clinopyroxene_hcp": 16.122127532958984,
+        "olivine_forsterite": 0.15893420577049255,
+        "spinel": 4.998059272766113,
+        "plagioclase_anorthite": 4.2814812660217285,
+        "featureless_bright": 33.182350158691406,
+        "dark_mature": 25.247865676879883
+      },
+      "warnings": [
+        "sum-to-one constraint violated (mean error=5.13e-01)",
+        "single endmember dominates 47.5% of pixels (clinopyroxene_hcp); likely overcollapsed map",
+        "spinel: 9.9% pixels but mean diagnostic SPM=0.0114 (< 0.020 -- assigned pixels lack spectral evidence)",
+        "latent clustering silhouette=-0.133 (< 0.05); encoder latent space poorly separated -- informational only, does not affect mineral map validity"
+      ],
+      "mean_uncertainty": 0.4847865104675293,
+      "median_reconstruction_error": 13.297500610351562
+    },
+    "pipeline_tag": "depth_v5_shade",
+    "representation": "depth_v5_shade",
+    "scientific_scope": "Encoder on L2(depth) + open-shade unmixer reconstructing band-depth mixtures (weathered library mixes; dark_mature capped shade, not a mineral class). Dominant map = mineral-only argmax; high residual \u2192 unmodelled."
+  }
+]

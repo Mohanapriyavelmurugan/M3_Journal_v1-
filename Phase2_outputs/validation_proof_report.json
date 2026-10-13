@@ -1,0 +1,305 @@
+{
+  "comparison_basis": "Dominant-pixel-fraction vs M3 spectral literature targets",
+  "tier1_physical": {
+    "Mare Imbrium": {
+      "abundance_min": 2.812923782791188e-10,
+      "abundance_max": 0.8931800127029419,
+      "mean_sum_to_one_error": 4.1492725699754374e-08,
+      "mean_max_abundance": 0.6635700298811945,
+      "mean_reconstruction_error": 0.0002449291350785643
+    },
+    "Mare Tranquillitatis": {
+      "abundance_min": 2.9213203546070434e-29,
+      "abundance_max": 0.974105954170227,
+      "mean_sum_to_one_error": 4.145139698152889e-08,
+      "mean_max_abundance": 0.5605371625607988,
+      "mean_reconstruction_error": 0.0005868124426342547
+    },
+    "Copernicus Crater": {
+      "abundance_min": 1.8333976643716138e-13,
+      "abundance_max": 0.9861230850219727,
+      "mean_sum_to_one_error": 3.6470105158059596e-08,
+      "mean_max_abundance": 0.47043334944735327,
+      "mean_reconstruction_error": 0.0004969987785443664
+    },
+    "Lunar Highlands South": {
+      "abundance_min": 2.9554930551511926e-12,
+      "abundance_max": 0.9060137271881104,
+      "mean_sum_to_one_error": 4.4429878442997506e-08,
+      "mean_max_abundance": 0.7475651034439122,
+      "mean_reconstruction_error": 0.00018531254318077117
+    }
+  },
+  "tier2_m3_literature": {
+    "Mare Imbrium": {
+      "rmse": 15.807066555381345,
+      "pipeline": {
+        "plagioclase_total_pct": 11.292807300653536,
+        "orthopyroxene_lcp_pct": 13.141774248343808,
+        "clinopyroxene_hcp_pct": 5.16520567172986,
+        "olivine_total_pct": 5.5876909872779454e-05,
+        "ilmenite_pct": 30.633985007107544,
+        "basalt_glass_pct": 39.50388568031255
+      },
+      "literature": {
+        "plagioclase_total_pct": 2.0,
+        "orthopyroxene_lcp_pct": 2.0,
+        "clinopyroxene_hcp_pct": 12.0,
+        "olivine_total_pct": 1.0,
+        "ilmenite_pct": 13.0,
+        "basalt_glass_pct": 70.0
+      },
+      "source": "Pieters et al. 2009; Mustard et al. 2011",
+      "cats": {
+        "plagioclase_total_pct": {
+          "pipeline": 11.292807300653536,
+          "literature": 2.0,
+          "err": 9.292807300653536
+        },
+        "orthopyroxene_lcp_pct": {
+          "pipeline": 13.141774248343808,
+          "literature": 2.0,
+          "err": 11.141774248343808
+        },
+        "clinopyroxene_hcp_pct": {
+          "pipeline": 5.16520567172986,
+          "literature": 12.0,
+          "err": 6.83479432827014
+        },
+        "olivine_total_pct": {
+          "pipeline": 5.5876909872779454e-05,
+          "literature": 1.0,
+          "err": 0.9999441230901273
+        },
+        "ilmenite_pct": {
+          "pipeline": 30.633985007107544,
+          "literature": 13.0,
+          "err": 17.633985007107544
+        },
+        "basalt_glass_pct": {
+          "pipeline": 39.50388568031255,
+          "literature": 70.0,
+          "err": 30.49611431968745
+        }
+      }
+    },
+    "Mare Tranquillitatis": {
+      "rmse": 5.166715627535718,
+      "pipeline": {
+        "plagioclase_total_pct": 12.291150968266379,
+        "orthopyroxene_lcp_pct": 30.863861267369096,
+        "clinopyroxene_hcp_pct": 1.8609420733686526,
+        "olivine_total_pct": 0.8342494771276882,
+        "ilmenite_pct": 5.234297601138041,
+        "basalt_glass_pct": 48.90046867987795
+      },
+      "literature": {
+        "plagioclase_total_pct": 2.0,
+        "orthopyroxene_lcp_pct": 29.0,
+        "clinopyroxene_hcp_pct": 4.0,
+        "olivine_total_pct": 2.0,
+        "ilmenite_pct": 8.0,
+        "basalt_glass_pct": 55.0
+      },
+      "source": "Pieters et al. 2009; Staid & Pieters 2000",
+      "cats": {
+        "plagioclase_total_pct": {
+          "pipeline": 12.291150968266379,
+          "literature": 2.0,
+          "err": 10.291150968266379
+        },
+        "orthopyroxene_lcp_pct": {
+          "pipeline": 30.863861267369096,
+          "literature": 29.0,
+          "err": 1.8638612673690957
+        },
+        "clinopyroxene_hcp_pct": {
+          "pipeline": 1.8609420733686526,
+          "literature": 4.0,
+          "err": 2.1390579266313474
+        },
+        "olivine_total_pct": {
+          "pipeline": 0.8342494771276882,
+          "literature": 2.0,
+          "err": 1.1657505228723117
+        },
+        "ilmenite_pct": {
+          "pipeline": 5.234297601138041,
+          "literature": 8.0,
+          "err": 2.7657023988619587
+        },
+        "basalt_glass_pct": {
+          "pipeline": 48.90046867987795,
+          "literature": 55.0,
+          "err": 6.099531320122047
+        }
+      }
+    },
+    "Copernicus Crater": {
+      "rmse": 26.997135749189663,
+      "pipeline": {
+        "plagioclase_total_pct": 10.965277609810371,
+        "orthopyroxene_lcp_pct": 31.779513049051854,
+        "clinopyroxene_hcp_pct": 0.28200887674148606,
+        "olivine_total_pct": 3.211923132739938,
+        "ilmenite_pct": 48.66739278976393,
+        "basalt_glass_pct": 4.771909920423761
+      },
+      "literature": {
+        "plagioclase_total_pct": 55.0,
+        "orthopyroxene_lcp_pct": 17.0,
+        "clinopyroxene_hcp_pct": 5.0,
+        "olivine_total_pct": 5.0,
+        "ilmenite_pct": 3.0,
+        "basalt_glass_pct": 15.0
+      },
+      "source": "Pieters et al. 1986; Hiesinger et al. 2012",
+      "cats": {
+        "plagioclase_total_pct": {
+          "pipeline": 10.965277609810371,
+          "literature": 55.0,
+          "err": 44.03472239018963
+        },
+        "orthopyroxene_lcp_pct": {
+          "pipeline": 31.779513049051854,
+          "literature": 17.0,
+          "err": 14.779513049051854
+        },
+        "clinopyroxene_hcp_pct": {
+          "pipeline": 0.28200887674148606,
+          "literature": 5.0,
+          "err": 4.717991123258514
+        },
+        "olivine_total_pct": {
+          "pipeline": 3.211923132739938,
+          "literature": 5.0,
+          "err": 1.7880768672600622
+        },
+        "ilmenite_pct": {
+          "pipeline": 48.66739278976393,
+          "literature": 3.0,
+          "err": 45.66739278976393
+        },
+        "basalt_glass_pct": {
+          "pipeline": 4.771909920423761,
+          "literature": 15.0,
+          "err": 10.228090079576239
+        }
+      }
+    },
+    "Lunar Highlands South": {
+      "rmse": 2.4021636908193646,
+      "pipeline": {
+        "plagioclase_total_pct": 84.35575519014665,
+        "orthopyroxene_lcp_pct": 3.515980466848666,
+        "clinopyroxene_hcp_pct": 0.0,
+        "olivine_total_pct": 0.0,
+        "ilmenite_pct": 3.2862992825852326,
+        "basalt_glass_pct": 8.812105845131526
+      },
+      "literature": {
+        "plagioclase_total_pct": 85.0,
+        "orthopyroxene_lcp_pct": 4.0,
+        "clinopyroxene_hcp_pct": 0.5,
+        "olivine_total_pct": 4.0,
+        "ilmenite_pct": 1.5,
+        "basalt_glass_pct": 5.0
+      },
+      "source": "Lucey et al. 2000; Pieters et al. 2001",
+      "cats": {
+        "plagioclase_total_pct": {
+          "pipeline": 84.35575519014665,
+          "literature": 85.0,
+          "err": 0.6442448098533475
+        },
+        "orthopyroxene_lcp_pct": {
+          "pipeline": 3.515980466848666,
+          "literature": 4.0,
+          "err": 0.48401953315133417
+        },
+        "clinopyroxene_hcp_pct": {
+          "pipeline": 0.0,
+          "literature": 0.5,
+          "err": 0.5
+        },
+        "olivine_total_pct": {
+          "pipeline": 0.0,
+          "literature": 4.0,
+          "err": 4.0
+        },
+        "ilmenite_pct": {
+          "pipeline": 3.2862992825852326,
+          "literature": 1.5,
+          "err": 1.7862992825852326
+        },
+        "basalt_glass_pct": {
+          "pipeline": 8.812105845131526,
+          "literature": 5.0,
+          "err": 3.8121058451315264
+        }
+      }
+    }
+  },
+  "tier3_fisher": {
+    "plagioclase_total_pct": {
+      "F": 48646.1186106878,
+      "level": "STRONG",
+      "scene_means_pct": [
+        11.292807300653536,
+        12.291150968266379,
+        10.965277609810371,
+        84.35575519014665
+      ]
+    },
+    "orthopyroxene_lcp_pct": {
+      "F": 6303.281001412861,
+      "level": "STRONG",
+      "scene_means_pct": [
+        13.141774248343808,
+        30.863861267369096,
+        31.779513049051854,
+        3.515980466848666
+      ]
+    },
+    "clinopyroxene_hcp_pct": {
+      "F": 562.3231911976324,
+      "level": "STRONG",
+      "scene_means_pct": [
+        5.16520567172986,
+        1.8609420733686526,
+        0.28200887674148606,
+        0.0
+      ]
+    },
+    "olivine_total_pct": {
+      "F": 230.64770540125184,
+      "level": "STRONG",
+      "scene_means_pct": [
+        5.5876909872779454e-05,
+        0.8342494771276882,
+        3.211923132739938,
+        0.0
+      ]
+    },
+    "ilmenite_pct": {
+      "F": 15014.11498460195,
+      "level": "STRONG",
+      "scene_means_pct": [
+        30.633985007107544,
+        5.234297601138041,
+        48.66739278976393,
+        3.2862992825852326
+      ]
+    },
+    "basalt_glass_pct": {
+      "F": 13258.120972606372,
+      "level": "STRONG",
+      "scene_means_pct": [
+        39.50388568031255,
+        48.90046867987795,
+        4.771909920423761,
+        8.812105845131526
+      ]
+    }
+  }
+}

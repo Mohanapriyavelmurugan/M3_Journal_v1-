@@ -1,0 +1,132 @@
+{
+  "scene": "Mare Tranquillitatis",
+  "mode": "frozen_shared_refresh",
+  "method_version": "depth_v2g_clusters",
+  "out_dir": "D:\\Journal\\M3 Journal\\Mare Tranquillitatis\\Pipeline_outputs\\06_mineral_id",
+  "shared_encoder": "D:\\Journal\\M3 Journal\\models\\shared\\encoder_B85.pth",
+  "gate0": {
+    "gate": "G0_Scene_READY",
+    "scene": "Mare Tranquillitatis",
+    "pass": true,
+    "reasons": [],
+    "fname": "M3G20090203T160452_V01_RFL",
+    "denoised": "D:\\Journal\\M3 Journal\\Mare Tranquillitatis\\Pipeline_outputs\\04_denoised\\M3G20090203T160452_V01_RFL_denoised.npy"
+  },
+  "gate2": {
+    "gate": "G2_CR_SPM_sanity",
+    "scene": "Mare Tranquillitatis",
+    "pass": true,
+    "enabled_indices": [
+      "OLINDEX3",
+      "LCPINDEX2",
+      "HCPINDEX2",
+      "BD1250"
+    ],
+    "active_frac": 0.29106470491937464,
+    "reasons": []
+  },
+  "gate3": {
+    "gate": "G3_Encoder_QA",
+    "scene": "Mare Tranquillitatis",
+    "pass": true,
+    "n_encoded": 400000,
+    "reasons": []
+  },
+  "gate4": {
+    "gate": "G4_PRESENT_audit",
+    "scene": "Mare Tranquillitatis",
+    "pass": true,
+    "present_groups": [
+      "Olivine",
+      "Low-Ca Pyroxene",
+      "High-Ca Pyroxene",
+      "Plagioclase"
+    ],
+    "present_strong": [
+      "Olivine",
+      "Low-Ca Pyroxene",
+      "High-Ca Pyroxene",
+      "Plagioclase"
+    ],
+    "present_weak": [],
+    "overall_verdict": "STRONG",
+    "mixture_qa": "PASS",
+    "reasons": []
+  },
+  "present": [
+    "Olivine",
+    "Low-Ca Pyroxene",
+    "High-Ca Pyroxene",
+    "Plagioclase"
+  ],
+  "present_strong": [
+    "Olivine",
+    "Low-Ca Pyroxene",
+    "High-Ca Pyroxene",
+    "Plagioclase"
+  ],
+  "present_weak": [],
+  "overall_verdict": "STRONG",
+  "n_clusters": 4,
+  "clustering_status": "PASS",
+  "mixture_qa": "PASS",
+  "rare": {
+    "Ilmenite": {
+      "n_sam_hits_gated": 691,
+      "status": "PRESENT_RARE",
+      "terrain": "mare",
+      "spatial_max_cell": 26,
+      "spatial_ok": true,
+      "mare_only_present_rare": true,
+      "requires": "SAM + d1.00>=0.015 + hmb>=0.01 (n>=120, terrain=mare, spatial_cell>=8, PRESENT_RARE mare-only)",
+      "examples": [
+        {
+          "y": 9744,
+          "x": 293,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.026021287553924053,
+          "d1.00": 0.032596538666985864,
+          "hmb": 0.017891582179003773
+        },
+        {
+          "y": 4285,
+          "x": 218,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.027140080271767394,
+          "d1.00": 0.03879709259469355,
+          "hmb": 0.02409213610671146
+        },
+        {
+          "y": 8241,
+          "x": 290,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.027706678244381895,
+          "d1.00": 0.03060775307237429,
+          "hmb": 0.015902796584392198
+        },
+        {
+          "y": 9990,
+          "x": 218,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.02757042918642838,
+          "d1.00": 0.04562852723985211,
+          "hmb": 0.030923570751870022
+        },
+        {
+          "y": 826,
+          "x": 215,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.030130305979165516,
+          "d1.00": 0.044175128420028575,
+          "hmb": 0.029470171932046485
+        }
+      ]
+    },
+    "Spinel": {
+      "n_sam_hits": 0,
+      "status": "ABSENT",
+      "requires": "SAM only (no dedicated SPM yet) \u2014 not PRESENT_RARE",
+      "examples": []
+    }
+  }
+}

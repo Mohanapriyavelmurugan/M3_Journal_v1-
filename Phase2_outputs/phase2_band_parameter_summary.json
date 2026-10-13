@@ -1,0 +1,52 @@
+[
+  {
+    "scene": "Copernicus Crater",
+    "fname": "M3G20090207T083836_V01_RFL",
+    "product": "band_parameter_maps",
+    "scientific_basis": "1-um and 2-um Fe2+ crystal-field band depth/centre (Adams 1974; Cloutis & Gaffey 1991; Klima et al. 2011). Composition classes are spectral types, not pure-mineral abundances.",
+    "detection_limit_bd": 0.04842541238623272,
+    "noise_sigma_estimate": 0.01614180412874424,
+    "valid_pixels": 5292032,
+    "mafic_detected_pct": 42.552766120839784,
+    "median_BD1000": 0.039033517241477966,
+    "median_BD2000": 0.032849669456481934,
+    "median_centre1_um": 0.9728132486343384,
+    "median_centre2_um": 2.1849353313446045,
+    "composition_summary": [
+      {
+        "composition_class": "featureless",
+        "pixels": 3040126,
+        "fraction_pct": 57.44723387916022
+      },
+      {
+        "composition_class": "mafic_weak",
+        "pixels": 1829947,
+        "fraction_pct": 34.57928825827206
+      },
+      {
+        "composition_class": "mixed_pyroxene",
+        "pixels": 190810,
+        "fraction_pct": 3.60560933871904
+      },
+      {
+        "composition_class": "HCP",
+        "pixels": 170060,
+        "fraction_pct": 3.213510424729102
+      },
+      {
+        "composition_class": "olivine_like",
+        "pixels": 40904,
+        "fraction_pct": 0.7729356133900929
+      },
+      {
+        "composition_class": "LCP",
+        "pixels": 20185,
+        "fraction_pct": 0.38142248572948917
+      }
+    ],
+    "soft_library_typing": null,
+    "library_entries": null,
+    "outputs_dir": "D:\\M3 Journal\\Copernicus Crater\\Pipeline_outputs\\08_band_parameters",
+    "caution": "Do not treat composition_class or soft library labels as per-pixel pure mineral abundances. Lunar soils are mixed and space-weathered; use region averages for publication claims."
+  }
+]

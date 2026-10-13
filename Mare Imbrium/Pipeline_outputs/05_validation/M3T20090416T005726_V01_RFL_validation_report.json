@@ -1,0 +1,184 @@
+{
+  "fname": "M3T20090416T005726_V01_RFL",
+  "cube_shape": [
+    1637,
+    608,
+    256
+  ],
+  "valid_bands": 247,
+  "dead_bands": 9,
+  "metric1_snr": {
+    "mean_improvement_pct": 3.9181684372158103,
+    "max_improvement_pct": 58.795116958782664,
+    "min_improvement_pct": -14.975542677147905,
+    "bands_passing": 235,
+    "bands_total": 247,
+    "mean_snr_raw": 24.267666789684217,
+    "mean_snr_physics": 24.94663979070872,
+    "mean_snr_ml": 25.149004531902726
+  },
+  "metric2_sam": {
+    "mean_sam_rad": 0.056274031129103654,
+    "median_sam_rad": 0.05245706454249538,
+    "p95_sam_rad": 0.09083700536352547,
+    "mean_sam_deg": 3.224264479885454,
+    "pct_pass": 40.013333333333335,
+    "pct_review": 56.986666666666665,
+    "pct_fail": 3.0,
+    "n_sampled": 15000,
+    "thresholds": {
+      "pass": 0.05,
+      "review": 0.1
+    }
+  },
+  "metric3_band_depth": {
+    "BD2300": {
+      "mineral": "Phyllosilicates",
+      "bd_original": 0.023676146743648405,
+      "bd_denoised": 0.023676146743648405,
+      "change_pct": 0.0,
+      "status": "PASS"
+    },
+    "BD1900": {
+      "mineral": "Hydrated minerals",
+      "bd_original": -0.003131205992065855,
+      "bd_denoised": 0.001762899007044255,
+      "change_pct": null,
+      "status": "N/A",
+      "reason": "feature not detected (bd<0.015)"
+    },
+    "BD2210": {
+      "mineral": "Al-OH clays",
+      "bd_original": -0.003987011786696677,
+      "bd_denoised": -0.004864569642144556,
+      "change_pct": null,
+      "status": "N/A",
+      "reason": "feature not detected (bd<0.015)"
+    },
+    "SINDEX2": {
+      "mineral": "Sulfates",
+      "bd_original": 0.0013934268486287965,
+      "bd_denoised": 0.004335050129002558,
+      "change_pct": null,
+      "status": "N/A",
+      "reason": "feature not detected (bd<0.015)"
+    },
+    "BD1500": {
+      "mineral": "Water ice",
+      "bd_original": 2.5334942186045595e-05,
+      "bd_denoised": 0.0016686761789606252,
+      "change_pct": null,
+      "status": "N/A",
+      "reason": "feature not detected (bd<0.015)"
+    },
+    "HCPINDEX2": {
+      "mineral": "HCP pyroxene",
+      "bd_original": 0.036353448425846396,
+      "bd_denoised": 0.036353448425846396,
+      "change_pct": 0.0,
+      "status": "PASS"
+    }
+  },
+  "metric4_pearson": {
+    "mean_r": 0.9881384421901548,
+    "pass_fraction": 0.9025,
+    "threshold": 0.98,
+    "n_sampled": 2000
+  },
+  "roi_validation": {
+    "BD2300": {
+      "mineral": "Phyllosilicates",
+      "status": "PASS",
+      "roi_pixels": 60320,
+      "roi_threshold": 0.04776677487997274,
+      "sampled_pixels": 5000,
+      "bd_original": 0.0612132942994024,
+      "bd_denoised": 0.0612132942994024,
+      "change_pct": 0.0,
+      "mean_sam_deg": 3.849075300126659,
+      "mean_pearson": 0.9806361606917495
+    },
+    "BD1900": {
+      "mineral": "Hydrated minerals",
+      "status": "FAIL",
+      "roi_pixels": 6197,
+      "roi_threshold": 0.045118087604637036,
+      "sampled_pixels": 5000,
+      "bd_original": 0.06446091676617664,
+      "bd_denoised": 0.017583059010531518,
+      "change_pct": -72.72291507377763,
+      "mean_sam_deg": 4.245446435729562,
+      "mean_pearson": 0.9639559782570636
+    },
+    "BD2210": {
+      "mineral": "Al-OH clays",
+      "status": "FAIL",
+      "roi_pixels": 5646,
+      "roi_threshold": 0.04480495737349299,
+      "sampled_pixels": 5000,
+      "bd_original": 0.07125331892311415,
+      "bd_denoised": 0.0088649016947977,
+      "change_pct": -87.55861224602974,
+      "mean_sam_deg": 4.4703798298363076,
+      "mean_pearson": 0.962065981228433
+    },
+    "SINDEX2": {
+      "mineral": "Sulfates",
+      "status": "FAIL",
+      "roi_pixels": 8339,
+      "roi_threshold": 0.041238128046890254,
+      "sampled_pixels": 5000,
+      "bd_original": 0.06336276423317565,
+      "bd_denoised": 0.016263065071548215,
+      "change_pct": -74.33340342965474,
+      "mean_sam_deg": 4.364399997206904,
+      "mean_pearson": 0.9600179810547794
+    },
+    "BD1500": {
+      "mineral": "Water ice",
+      "status": "FAIL",
+      "roi_pixels": 21404,
+      "roi_threshold": 0.0649588714282062,
+      "sampled_pixels": 5000,
+      "bd_original": 0.08539150426857428,
+      "bd_denoised": 0.017567034879119592,
+      "change_pct": -79.4276549762286,
+      "mean_sam_deg": 3.4855562699229354,
+      "mean_pearson": 0.983369155729667
+    },
+    "HCPINDEX2": {
+      "mineral": "HCP pyroxene",
+      "status": "PASS",
+      "roi_pixels": 84074,
+      "roi_threshold": 0.05866244905236262,
+      "sampled_pixels": 5000,
+      "bd_original": 0.07119764402440633,
+      "bd_denoised": 0.07119764402440633,
+      "change_pct": 0.0,
+      "mean_sam_deg": 3.879984422817249,
+      "mean_pearson": 0.9804565425798913
+    }
+  },
+  "metric5_noise": {
+    "N1_Gaussian": "N/A",
+    "N2_Stripe": 54.579347344612195,
+    "N3_Spikes": "N/A",
+    "N4_Thermal": 43.94378575399925,
+    "N5_Smile": 100.0
+  },
+  "band_decisions": {
+    "PASS": 235,
+    "REVIEW": 0,
+    "FAIL": 12,
+    "pct_pass": 95.1417004048583
+  },
+  "overall_verdict": "REVIEW",
+  "figures": {
+    "fig1": "D:\\M3 Journal\\Mare Imbrium\\Pipeline_outputs\\05_validation\\M3T20090416T005726_V01_RFL_fig1_snr_comparison.png",
+    "fig2": "D:\\M3 Journal\\Mare Imbrium\\Pipeline_outputs\\05_validation\\M3T20090416T005726_V01_RFL_fig2_sam_map.png",
+    "fig3": "D:\\M3 Journal\\Mare Imbrium\\Pipeline_outputs\\05_validation\\M3T20090416T005726_V01_RFL_fig3_band_depth.png",
+    "fig4": "D:\\M3 Journal\\Mare Imbrium\\Pipeline_outputs\\05_validation\\M3T20090416T005726_V01_RFL_fig4_noise_suppression.png",
+    "fig5": "D:\\M3 Journal\\Mare Imbrium\\Pipeline_outputs\\05_validation\\M3T20090416T005726_V01_RFL_fig5_spectra_gallery.png",
+    "fig6": "D:\\M3 Journal\\Mare Imbrium\\Pipeline_outputs\\05_validation\\M3T20090416T005726_V01_RFL_fig6_spatial.png"
+  }
+}

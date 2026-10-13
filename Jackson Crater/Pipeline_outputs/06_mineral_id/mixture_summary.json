@@ -1,0 +1,99 @@
+{
+  "authority": "SECONDARY \u2014 not PRESENT proof",
+  "method_version": "depth_v2g_clusters",
+  "qa_status": "PASS",
+  "citable": true,
+  "mean_family_abundance": {
+    "Olivine": 0.0,
+    "LCP": 0.1811411129310727,
+    "HCP": 0.5452517606317997,
+    "Plagioclase": 0.2736071012914181,
+    "Ilmenite": 0.0
+  },
+  "olivine_vs_pyroxene": {
+    "olivine_mean": 0.0,
+    "pyroxene_mean_LCP_plus_HCP": 0.7263928735628724,
+    "plagioclase_mean": 0.2736071012914181,
+    "olivine_fraction_of_mafic": 0.0,
+    "pyroxene_fraction_of_mafic": 0.9999999862333452,
+    "note": "Soft mixture context from unmixer on training pixels only."
+  },
+  "endmembers": [
+    {
+      "family": "LCP",
+      "name": "USGS_s07_M3t_Pigeonite_HS199.3B_ASDFRc_AREF"
+    },
+    {
+      "family": "LCP",
+      "name": "USGS_s07_M3t_Hypersthene_PYX02.c_180um_BECKc_AREF"
+    },
+    {
+      "family": "LCP",
+      "name": "RELAB_Pigeonite_176"
+    },
+    {
+      "family": "HCP",
+      "name": "USGS_s07_M3t_Diopside_HS15.8_pyroxene_ASDFRc_AREF"
+    },
+    {
+      "family": "HCP",
+      "name": "RELAB_Clinopyroxene_170"
+    },
+    {
+      "family": "HCP",
+      "name": "USGS_s07_M3t_Augite_WS588_Pyroxene_BECKb_AREF"
+    },
+    {
+      "family": "Plagioclase",
+      "name": "USGS_s07_M3t_Albite_HS143.6_Plagioclase_ASDFRd_AREF"
+    },
+    {
+      "family": "Plagioclase",
+      "name": "USGS_s07_M3t_Albite_HS66.3B_Plagioclase_BECKc_AREF"
+    },
+    {
+      "family": "Plagioclase",
+      "name": "RELAB_Plagioclase_171"
+    },
+    {
+      "family": "LCP",
+      "name": "USGS_s07_M3t_Hypersthene_PYX02.d_23um_BECKc_AREF"
+    },
+    {
+      "family": "LCP",
+      "name": "USGS_s07_M3t_Hypersthene_NMNHC2368_BECKb_AREF"
+    },
+    {
+      "family": "LCP",
+      "name": "USGS_s07_M3t_Enstatite_NMNH128288_BECKc_AREF"
+    }
+  ],
+  "train_loss_best": 0.01162377861328423,
+  "endmembers_frozen": true,
+  "train_pixels": 3595,
+  "allowed_families": [
+    "LCP",
+    "HCP",
+    "Plagioclase"
+  ],
+  "checks": {
+    "abund_nonneg": true,
+    "abund_sum1": true,
+    "mean_max_abund": 0.4916708767414093,
+    "family_max_abund": 0.5452517606317997,
+    "family_min_core": 0.1811411129310727,
+    "active_core_families": [
+      "LCP",
+      "HCP",
+      "Plagioclase"
+    ],
+    "collapse_threshold": 0.85,
+    "flat_min_mean_max": 0.2,
+    "flat_min_family_max": 0.32,
+    "collapsed": false,
+    "flat": false,
+    "loss_finite": true,
+    "best_score": 10.164482866413891,
+    "softmax_temp": 1.5
+  }
+}

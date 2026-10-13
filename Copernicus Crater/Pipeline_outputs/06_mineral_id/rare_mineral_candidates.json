@@ -1,0 +1,63 @@
+{
+  "scene": "Copernicus Crater",
+  "method_version": "depth_v2g_clusters",
+  "candidates": {
+    "Ilmenite": {
+      "n_sam_hits_gated": 162,
+      "status": "CANDIDATE",
+      "terrain": "nonmare",
+      "spatial_max_cell": 7,
+      "spatial_ok": false,
+      "mare_only_present_rare": true,
+      "requires": "SAM + d1.00>=0.03 + hmb>=0.02 (n>=400, terrain=nonmare, spatial_cell>=20, PRESENT_RARE mare-only)",
+      "examples": [
+        {
+          "y": 2968,
+          "x": 267,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.4B_ASDFRb_AREF",
+          "sam": 0.03067648629246914,
+          "d1.00": 0.09452831279688534,
+          "hmb": 0.042856987342902886
+        },
+        {
+          "y": 1148,
+          "x": 181,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.4B_ASDFRb_AREF",
+          "sam": 0.046157508371367416,
+          "d1.00": 0.08906716500991041,
+          "hmb": 0.03739583955592796
+        },
+        {
+          "y": 2899,
+          "x": 123,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.4B_ASDFRb_AREF",
+          "sam": 0.042019574379446756,
+          "d1.00": 0.12498870306224019,
+          "hmb": 0.07331737760825774
+        },
+        {
+          "y": 2382,
+          "x": 247,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.4B_ASDFRb_AREF",
+          "sam": 0.03058342118297661,
+          "d1.00": 0.08338170345208962,
+          "hmb": 0.031710377998107164
+        },
+        {
+          "y": 2579,
+          "x": 247,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.4B_ASDFRb_AREF",
+          "sam": 0.03146446965114236,
+          "d1.00": 0.08864072365627507,
+          "hmb": 0.036969398202292614
+        }
+      ]
+    },
+    "Spinel": {
+      "n_sam_hits": 0,
+      "status": "ABSENT",
+      "requires": "SAM only (no dedicated SPM yet) \u2014 not PRESENT_RARE",
+      "examples": []
+    }
+  }
+}

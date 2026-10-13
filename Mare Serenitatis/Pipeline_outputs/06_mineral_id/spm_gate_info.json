@@ -1,0 +1,68 @@
+{
+  "OLINDEX3": {
+    "enabled": true,
+    "thr": 0.022210996598005295,
+    "thr_floor": 0.01,
+    "n_hot": 599068,
+    "hot_frac": 0.09974784475868757,
+    "hot_med": 0.030698340386152267,
+    "scene_med": 0.0,
+    "contrast_ok": true,
+    "saturated": false
+  },
+  "LCPINDEX2": {
+    "enabled": true,
+    "thr": 0.02041303552687168,
+    "thr_floor": 0.006,
+    "n_hot": 597819,
+    "hot_frac": 0.0995398799565222,
+    "hot_med": 0.029202774167060852,
+    "scene_med": 0.004026784561574459,
+    "contrast_ok": true,
+    "saturated": false
+  },
+  "HCPINDEX2": {
+    "enabled": false,
+    "thr": 0.019824111834168434,
+    "thr_floor": 0.006,
+    "n_hot": 598141,
+    "hot_frac": 0.0995934945812598,
+    "hot_med": 0.02538096159696579,
+    "scene_med": 0.008407572284340858,
+    "contrast_ok": false,
+    "saturated": false
+  },
+  "BD1250": {
+    "enabled": true,
+    "thr": 0.005,
+    "thr_floor": 0.005,
+    "n_hot": 232165,
+    "hot_frac": 0.03865664395093829,
+    "hot_med": 0.012125763110816479,
+    "scene_med": 0.0,
+    "contrast_ok": true,
+    "saturated": false
+  },
+  "BD1000": {
+    "enabled": false,
+    "reason": "diagnostic_or_support",
+    "thr": 0.008,
+    "n_hot": 2081625
+  },
+  "R750": {
+    "enabled": false,
+    "reason": "diagnostic_or_support",
+    "thr": 0.05,
+    "n_hot": 4227795
+  },
+  "BD1500": {
+    "enabled": false,
+    "reason": "ice_not_gated"
+  },
+  "BD1900": {
+    "enabled": false,
+    "reason": "diagnostic_or_support",
+    "thr": 0.008,
+    "n_hot": 780649
+  }
+}

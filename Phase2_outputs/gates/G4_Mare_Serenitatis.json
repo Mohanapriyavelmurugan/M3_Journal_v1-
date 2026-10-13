@@ -1,0 +1,19 @@
+{
+  "gate": "G4_PRESENT_audit",
+  "scene": "Mare Serenitatis",
+  "pass": true,
+  "present_groups": [
+    "Olivine",
+    "Low-Ca Pyroxene",
+    "Plagioclase"
+  ],
+  "present_strong": [
+    "Olivine",
+    "Low-Ca Pyroxene",
+    "Plagioclase"
+  ],
+  "present_weak": [],
+  "overall_verdict": "STRONG",
+  "mixture_qa": "PASS",
+  "reasons": []
+}

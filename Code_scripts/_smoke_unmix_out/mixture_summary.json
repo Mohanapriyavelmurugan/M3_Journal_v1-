@@ -1,0 +1,89 @@
+{
+  "authority": "SECONDARY \u2014 not PRESENT proof",
+  "method_version": "depth_v2d_unmix",
+  "qa_status": "PASS",
+  "citable": true,
+  "mean_family_abundance": {
+    "Olivine": 0.27888672798871994,
+    "LCP": 0.11488615348935127,
+    "HCP": 0.5148588940501213,
+    "Plagioclase": 0.09136819560080767,
+    "Ilmenite": 0.0
+  },
+  "olivine_vs_pyroxene": {
+    "olivine_mean": 0.27888672798871994,
+    "pyroxene_mean_LCP_plus_HCP": 0.6297450475394726,
+    "plagioclase_mean": 0.09136819560080767,
+    "olivine_fraction_of_mafic": 0.30693041167011514,
+    "pyroxene_fraction_of_mafic": 0.6930695773243266,
+    "note": "Soft mixture context from unmixer on training pixels only."
+  },
+  "endmembers": [
+    {
+      "family": "Olivine",
+      "name": "USGS_s07_M3t_Olivine_HS420.2B_ASDFRc_AREF"
+    },
+    {
+      "family": "Olivine",
+      "name": "USGS_s07_M3t_Olivine_HS285.4B_Fo80_BECKb_AREF"
+    },
+    {
+      "family": "Olivine",
+      "name": "RELAB_olivine_169"
+    },
+    {
+      "family": "LCP",
+      "name": "USGS_s07_M3t_Hypersthene_PYX02.g_7um_BECKc_AREF"
+    },
+    {
+      "family": "LCP",
+      "name": "USGS_s07_M3t_Pigeonite_HS199.3B_ASDFRc_AREF"
+    },
+    {
+      "family": "LCP",
+      "name": "RELAB_Pigeonite_176"
+    },
+    {
+      "family": "HCP",
+      "name": "USGS_s07_M3t_Diopside_HS15.3B_pyroxene_ASDFRc_AREF"
+    },
+    {
+      "family": "HCP",
+      "name": "RELAB_Clinopyroxene_170"
+    },
+    {
+      "family": "HCP",
+      "name": "USGS_s07_M3t_Augite_WS588_Pyroxene_BECKb_AREF"
+    },
+    {
+      "family": "Plagioclase",
+      "name": "USGS_s07_M3t_Albite_HS143.1B_Plagioclase_ASDFRb_AREF"
+    },
+    {
+      "family": "Plagioclase",
+      "name": "USGS_s07_M3t_Albite_HS66.3B_Plagioclase_BECKc_AREF"
+    },
+    {
+      "family": "Plagioclase",
+      "name": "RELAB_Plagioclase_171"
+    }
+  ],
+  "train_loss_best": 0.01154237287119031,
+  "endmembers_frozen": true,
+  "train_pixels": 3598,
+  "checks": {
+    "abund_nonneg": true,
+    "abund_sum1": true,
+    "mean_max_abund": 0.4650048017501831,
+    "family_max_abund": 0.5148588940501213,
+    "family_min_core": 0.09136819560080767,
+    "collapse_threshold": 0.85,
+    "flat_min_mean_max": 0.2,
+    "flat_min_family_max": 0.32,
+    "collapsed": false,
+    "flat": false,
+    "loss_finite": true,
+    "best_score": 10.021377799101174,
+    "softmax_temp": 1.5
+  }
+}

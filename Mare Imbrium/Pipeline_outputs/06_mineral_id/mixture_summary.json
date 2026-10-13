@@ -1,0 +1,101 @@
+{
+  "authority": "SECONDARY \u2014 not PRESENT proof",
+  "method_version": "depth_v2g_clusters",
+  "qa_status": "PASS",
+  "citable": true,
+  "mean_family_abundance": {
+    "Olivine": 0.5026977234520018,
+    "LCP": 0.03217510646209121,
+    "HCP": 0.423847240395844,
+    "Plagioclase": 0.04127993620932102,
+    "Ilmenite": 0.0
+  },
+  "olivine_vs_pyroxene": {
+    "olivine_mean": 0.5026977234520018,
+    "pyroxene_mean_LCP_plus_HCP": 0.4560223468579352,
+    "plagioclase_mean": 0.04127993620932102,
+    "olivine_fraction_of_mafic": 0.5243425414532765,
+    "pyroxene_fraction_of_mafic": 0.47565744811615013,
+    "note": "Soft mixture context from unmixer on training pixels only."
+  },
+  "endmembers": [
+    {
+      "family": "Olivine",
+      "name": "USGS_s07_M3t_Olivine_HS420.2B_ASDFRc_AREF"
+    },
+    {
+      "family": "Olivine",
+      "name": "USGS_s07_M3t_Olivine_HS285.4B_Fo80_BECKb_AREF"
+    },
+    {
+      "family": "Olivine",
+      "name": "RELAB_olivine_169"
+    },
+    {
+      "family": "LCP",
+      "name": "USGS_s07_M3t_Hypersthene_PYX02.g_7um_BECKc_AREF"
+    },
+    {
+      "family": "LCP",
+      "name": "USGS_s07_M3t_Pigeonite_HS199.3B_ASDFRc_AREF"
+    },
+    {
+      "family": "LCP",
+      "name": "RELAB_Pigeonite_176"
+    },
+    {
+      "family": "HCP",
+      "name": "USGS_s07_M3t_Diopside_HS15.3B_pyroxene_ASDFRc_AREF"
+    },
+    {
+      "family": "HCP",
+      "name": "RELAB_Clinopyroxene_170"
+    },
+    {
+      "family": "HCP",
+      "name": "USGS_s07_M3t_Augite_WS588_Pyroxene_BECKb_AREF"
+    },
+    {
+      "family": "Plagioclase",
+      "name": "USGS_s07_M3t_Albite_HS143.1B_Plagioclase_ASDFRb_AREF"
+    },
+    {
+      "family": "Plagioclase",
+      "name": "USGS_s07_M3t_Albite_HS66.3B_Plagioclase_BECKc_AREF"
+    },
+    {
+      "family": "Plagioclase",
+      "name": "RELAB_Plagioclase_171"
+    }
+  ],
+  "train_loss_best": 0.0031647993600927293,
+  "endmembers_frozen": true,
+  "train_pixels": 3599,
+  "allowed_families": [
+    "Olivine",
+    "LCP",
+    "HCP",
+    "Plagioclase"
+  ],
+  "checks": {
+    "abund_nonneg": true,
+    "abund_sum1": true,
+    "mean_max_abund": 0.4827359616756439,
+    "family_max_abund": 0.5026977234520018,
+    "family_min_core": 0.03217510646209121,
+    "active_core_families": [
+      "Olivine",
+      "LCP",
+      "HCP",
+      "Plagioclase"
+    ],
+    "collapse_threshold": 0.85,
+    "flat_min_mean_max": 0.2,
+    "flat_min_family_max": 0.32,
+    "collapsed": false,
+    "flat": false,
+    "loss_finite": true,
+    "best_score": 9.997647029813379,
+    "softmax_temp": 1.5
+  }
+}

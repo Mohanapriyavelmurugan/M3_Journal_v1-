@@ -1,0 +1,106 @@
+{
+  "fname": "M3G20090610T153615_V01_RFL",
+  "cube_shape": [
+    2627,
+    304,
+    85
+  ],
+  "valid_bands": 83,
+  "dead_bands": 2,
+  "metric1_snr": {
+    "mean_improvement_pct": 9.500251155807128,
+    "max_improvement_pct": 33.99776992618763,
+    "min_improvement_pct": 0.0,
+    "bands_passing": 83,
+    "bands_total": 83,
+    "mean_snr_raw": 3.3145060855222037,
+    "mean_snr_physics": 3.5675281702754007,
+    "mean_snr_ml": 3.6237326899305784
+  },
+  "metric2_sam": {
+    "mean_sam_rad": 0.6505108317069269,
+    "median_sam_rad": 0.6795611429354254,
+    "p95_sam_rad": 1.466389770237641,
+    "mean_sam_deg": 37.27152518435189,
+    "pct_pass": 31.433333333333337,
+    "pct_review": 6.293333333333333,
+    "pct_fail": 62.27333333333333,
+    "n_sampled": 15000,
+    "thresholds": {
+      "pass": 0.05,
+      "review": 0.1
+    }
+  },
+  "metric3_band_depth": {
+    "BD2300": {
+      "mineral": "Phyllosilicates",
+      "bd_original": 0.40765096303680765,
+      "bd_denoised": 0.40765096303680765,
+      "change_pct": 0.0,
+      "status": "PASS"
+    },
+    "BD1900": {
+      "mineral": "Hydrated minerals",
+      "bd_original": 1.2846717073447287,
+      "bd_denoised": 1.2846717073447287,
+      "change_pct": 0.0,
+      "status": "PASS"
+    },
+    "BD2210": {
+      "mineral": "Al-OH clays",
+      "bd_original": 0.5341644667455214,
+      "bd_denoised": 0.5341644667455214,
+      "change_pct": 0.0,
+      "status": "PASS"
+    },
+    "SINDEX2": {
+      "mineral": "Sulfates",
+      "bd_original": 0.5861750103967124,
+      "bd_denoised": 0.5861750103967124,
+      "change_pct": 0.0,
+      "status": "PASS"
+    },
+    "BD1500": {
+      "mineral": "Water ice",
+      "bd_original": 0.6360040372691953,
+      "bd_denoised": 0.6360040372691953,
+      "change_pct": 0.0,
+      "status": "PASS"
+    },
+    "HCPINDEX2": {
+      "mineral": "HCP pyroxene",
+      "bd_original": 0.6116529881936125,
+      "bd_denoised": 0.6116529881936125,
+      "change_pct": 0.0,
+      "status": "PASS"
+    }
+  },
+  "metric4_pearson": {
+    "mean_r": 0.705475363958469,
+    "pass_fraction": 0.344,
+    "threshold": 0.98,
+    "n_sampled": 2000
+  },
+  "metric5_noise": {
+    "N1_Gaussian": 2.006062768669344,
+    "N2_Stripe": 12.757201574065482,
+    "N3_Spikes": 1.396484943662652,
+    "N4_Thermal": "N/A",
+    "N5_Smile": 100.0
+  },
+  "band_decisions": {
+    "PASS": 83,
+    "REVIEW": 0,
+    "FAIL": 0,
+    "pct_pass": 100.0
+  },
+  "overall_verdict": "REVIEW",
+  "figures": {
+    "fig1": "D:\\M3 Journal\\South Pole Region\\Pipeline_outputs\\05_validation\\M3G20090610T153615_V01_RFL_fig1_snr_comparison.png",
+    "fig2": "D:\\M3 Journal\\South Pole Region\\Pipeline_outputs\\05_validation\\M3G20090610T153615_V01_RFL_fig2_sam_map.png",
+    "fig3": "D:\\M3 Journal\\South Pole Region\\Pipeline_outputs\\05_validation\\M3G20090610T153615_V01_RFL_fig3_band_depth.png",
+    "fig4": "D:\\M3 Journal\\South Pole Region\\Pipeline_outputs\\05_validation\\M3G20090610T153615_V01_RFL_fig4_noise_suppression.png",
+    "fig5": "D:\\M3 Journal\\South Pole Region\\Pipeline_outputs\\05_validation\\M3G20090610T153615_V01_RFL_fig5_spectra_gallery.png",
+    "fig6": "D:\\M3 Journal\\South Pole Region\\Pipeline_outputs\\05_validation\\M3G20090610T153615_V01_RFL_fig6_spatial.png"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "style": {
+    "font": "Times New Roman",
+    "base_size_pt": 16,
+    "background": "white"
+  },
+  "out_dir": "D:\\Journal\\M3 Journal\\Paper_Figures\\mineral_id",
+  "scenes": [
+    "Copernicus Crater",
+    "Mare Tranquillitatis",
+    "Lunar Highlands South",
+    "Mare Imbrium",
+    "Mare Serenitatis",
+    "Jackson Crater"
+  ],
+  "figures": [
+    "F01_cross_scene_claim_matrix.png \u2014 minerals found per scene",
+    "F02_stage_gate_results.png \u2014 G0\u2013G4 / cluster / unmix PASS-FAIL",
+    "F03_claim_counts_verdict.png \u2014 strong/weak/rare counts + verdict",
+    "F04_*_present_proof.png \u2014 SPM hotspot + CR spectra + proof metrics",
+    "F05_cross_scene_proof_metrics.png \u2014 depth / HMB / SAM comparison",
+    "F06_rare_mineral_status.png \u2014 Ilmenite / Spinel",
+    "F07_secondary_mixture_stacks.png \u2014 unmix SI only",
+    "F08_enabled_spm_indices.png \u2014 Gate2 SPM enablement"
+  ]
+}

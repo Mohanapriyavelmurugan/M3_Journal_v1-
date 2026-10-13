@@ -1,0 +1,68 @@
+{
+  "method_version": "depth_v2g_clusters",
+  "pretrain_mode": "pooled",
+  "prior_scenes": [
+    "Mare Tranquillitatis",
+    "Lunar Highlands South",
+    "Copernicus Crater"
+  ],
+  "pool_sizes": {
+    "Mare Tranquillitatis": 18000,
+    "Lunar Highlands South": 18000,
+    "Copernicus Crater": 18000
+  },
+  "pooled_n": 54000,
+  "shared_encoder": "D:\\Journal\\M3 Journal\\models\\shared\\encoder_B85.pth",
+  "refreshed": true,
+  "results": [
+    {
+      "scene": "Mare Tranquillitatis",
+      "present_strong": [
+        "Olivine",
+        "Low-Ca Pyroxene",
+        "High-Ca Pyroxene",
+        "Plagioclase"
+      ],
+      "present_weak": [],
+      "overall_verdict": "STRONG",
+      "n_clusters": 4,
+      "clustering_status": "PASS",
+      "mixture_qa": "PASS",
+      "gate4": true,
+      "rare_ilm": "PRESENT_RARE"
+    },
+    {
+      "scene": "Lunar Highlands South",
+      "present_strong": [
+        "Plagioclase"
+      ],
+      "present_weak": [
+        "Low-Ca Pyroxene",
+        "High-Ca Pyroxene"
+      ],
+      "overall_verdict": "MODERATE",
+      "n_clusters": 2,
+      "clustering_status": "PASS",
+      "mixture_qa": "PASS",
+      "gate4": true,
+      "rare_ilm": "CANDIDATE"
+    },
+    {
+      "scene": "Copernicus Crater",
+      "present_strong": [
+        "Olivine",
+        "Low-Ca Pyroxene",
+        "High-Ca Pyroxene",
+        "Plagioclase"
+      ],
+      "present_weak": [],
+      "overall_verdict": "STRONG",
+      "n_clusters": 4,
+      "clustering_status": "PASS",
+      "mixture_qa": "PASS",
+      "gate4": true,
+      "rare_ilm": "CANDIDATE"
+    }
+  ],
+  "claims_refresh": "depth_v2g_clusters"
+}

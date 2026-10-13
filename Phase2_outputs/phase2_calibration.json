@@ -1,0 +1,85 @@
+{
+  "sam_max_rad": 0.44891414900641985,
+  "min_depth_norm": 0.3867220163345337,
+  "scene_min_depth_norm": 0.08,
+  "per_class": {
+    "clinopyroxene": {
+      "sam_max_rad": 0.19115674877146566,
+      "n_correct": 21,
+      "n_wrong_assigned": 10,
+      "mean_depth_norm": 1.7098105177283287
+    },
+    "olivine": {
+      "sam_max_rad": 0.26121878047074093,
+      "n_correct": 23,
+      "n_wrong_assigned": 3,
+      "mean_depth_norm": 2.6683418974280357
+    },
+    "orthopyroxene": {
+      "sam_max_rad": 0.22448950945963575,
+      "n_correct": 19,
+      "n_wrong_assigned": 5,
+      "mean_depth_norm": 2.3312500507935234
+    },
+    "plagioclase": {
+      "sam_max_rad": 0.6863357202441653,
+      "n_correct": 17,
+      "n_wrong_assigned": 0,
+      "mean_depth_norm": 0.51387360394001
+    },
+    "spinel": {
+      "sam_max_rad": 0.2861202396406554,
+      "n_correct": 2,
+      "n_wrong_assigned": 0,
+      "mean_depth_norm": 1.609523981809616
+    }
+  },
+  "groupwise_accuracy": 0.82,
+  "n_test": 100,
+  "confusion": {
+    "clinopyroxene": {
+      "clinopyroxene": 21,
+      "olivine": 1,
+      "orthopyroxene": 2,
+      "plagioclase": 0,
+      "spinel": 0
+    },
+    "olivine": {
+      "clinopyroxene": 0,
+      "olivine": 23,
+      "orthopyroxene": 1,
+      "plagioclase": 0,
+      "spinel": 0
+    },
+    "orthopyroxene": {
+      "clinopyroxene": 3,
+      "olivine": 1,
+      "orthopyroxene": 19,
+      "plagioclase": 0,
+      "spinel": 0
+    },
+    "plagioclase": {
+      "clinopyroxene": 6,
+      "olivine": 1,
+      "orthopyroxene": 1,
+      "plagioclase": 17,
+      "spinel": 0
+    },
+    "spinel": {
+      "clinopyroxene": 1,
+      "olivine": 0,
+      "orthopyroxene": 1,
+      "plagioclase": 0,
+      "spinel": 2
+    }
+  },
+  "label_flip_under_1pct_noise": 0.0,
+  "class_counts": {
+    "plagioclase": 25,
+    "clinopyroxene": 24,
+    "olivine": 24,
+    "orthopyroxene": 23,
+    "spinel": 4
+  },
+  "notes": "Depth-SAM group-wise CV; thresholds for matcher abstention."
+}

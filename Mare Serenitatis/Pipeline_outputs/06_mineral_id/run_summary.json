@@ -1,0 +1,151 @@
+{
+  "scene": "Mare Serenitatis",
+  "mode": "adapt",
+  "method_version": "depth_v2g_clusters",
+  "out_dir": "D:\\Journal\\M3 Journal\\Mare Serenitatis\\Pipeline_outputs\\06_mineral_id",
+  "gate0": {
+    "gate": "G0_Scene_READY",
+    "scene": "Mare Serenitatis",
+    "pass": true,
+    "reasons": [],
+    "fname": "M3G20090204T113444_V01_RFL",
+    "denoised": "D:\\Journal\\M3 Journal\\Mare Serenitatis\\Pipeline_outputs\\04_denoised\\M3G20090204T113444_V01_RFL_denoised.npy"
+  },
+  "gate1": {
+    "gate": "G1_Library_QC",
+    "pass": true,
+    "n_spectra": 83,
+    "min_required": 40,
+    "family_counts": {
+      "Plagioclase": 20,
+      "HCP": 19,
+      "Ilmenite": 7,
+      "Olivine": 19,
+      "LCP": 18
+    },
+    "core_families_ok": true,
+    "relab": 19,
+    "usgs": 64,
+    "reasons": []
+  },
+  "gate2": {
+    "gate": "G2_CR_SPM_sanity",
+    "scene": "Mare Serenitatis",
+    "pass": true,
+    "enabled_indices": [
+      "OLINDEX3",
+      "LCPINDEX2",
+      "BD1250"
+    ],
+    "active_frac": 0.2137570131925278,
+    "reasons": []
+  },
+  "gate3": {
+    "gate": "G3_Encoder_QA",
+    "scene": "Mare Serenitatis",
+    "pass": true,
+    "n_encoded": 400000,
+    "reasons": []
+  },
+  "gate4": {
+    "gate": "G4_PRESENT_audit",
+    "scene": "Mare Serenitatis",
+    "pass": true,
+    "present_groups": [
+      "Olivine",
+      "Low-Ca Pyroxene",
+      "Plagioclase"
+    ],
+    "present_strong": [
+      "Olivine",
+      "Low-Ca Pyroxene",
+      "Plagioclase"
+    ],
+    "present_weak": [],
+    "overall_verdict": "STRONG",
+    "mixture_qa": "PASS",
+    "reasons": []
+  },
+  "present": [
+    "Olivine",
+    "Low-Ca Pyroxene",
+    "Plagioclase"
+  ],
+  "present_strong": [
+    "Olivine",
+    "Low-Ca Pyroxene",
+    "Plagioclase"
+  ],
+  "present_weak": [],
+  "overall_verdict": "STRONG",
+  "n_clusters": 7,
+  "clustering_status": "PASS",
+  "mixture_secondary": {
+    "olivine_mean": 0.5113016867544502,
+    "pyroxene_mean_LCP_plus_HCP": 0.2950280955992639,
+    "plagioclase_mean": 0.19367020286154002,
+    "olivine_fraction_of_mafic": 0.6341098786167094,
+    "pyroxene_fraction_of_mafic": 0.3658901089814171,
+    "note": "Soft mixture context from unmixer on training pixels only."
+  },
+  "mixture_qa": "PASS",
+  "rare": {
+    "Ilmenite": {
+      "n_sam_hits_gated": 761,
+      "status": "PRESENT_RARE",
+      "terrain": "mare",
+      "spatial_max_cell": 17,
+      "spatial_ok": true,
+      "mare_only_present_rare": true,
+      "requires": "SAM + d1.00>=0.015 + hmb>=0.01 (n>=120, terrain=mare, spatial_cell>=8, PRESENT_RARE mare-only)",
+      "examples": [
+        {
+          "y": 288,
+          "x": 46,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.4B_ASDFRb_AREF",
+          "sam": 0.05189467950335206,
+          "d1.00": 0.03596122798121126,
+          "hmb": 0.021735534423247715
+        },
+        {
+          "y": 1814,
+          "x": 200,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.036730376782633446,
+          "d1.00": 0.05910817131187529,
+          "hmb": 0.04488247775391174
+        },
+        {
+          "y": 4318,
+          "x": 196,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.033358688127037,
+          "d1.00": 0.03879531360926014,
+          "hmb": 0.024569620051296592
+        },
+        {
+          "y": 4456,
+          "x": 222,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.025264190867774493,
+          "d1.00": 0.025398111429269843,
+          "hmb": 0.011172417871306295
+        },
+        {
+          "y": 1086,
+          "x": 227,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.034780493424548774,
+          "d1.00": 0.038788283941032176,
+          "hmb": 0.024562590383068628
+        }
+      ]
+    },
+    "Spinel": {
+      "n_sam_hits": 0,
+      "status": "ABSENT",
+      "requires": "SAM only (no dedicated SPM yet) \u2014 not PRESENT_RARE",
+      "examples": []
+    }
+  }
+}

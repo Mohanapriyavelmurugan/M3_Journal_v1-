@@ -1,0 +1,51 @@
+[
+  {
+    "scene": "Bullialdus Crater",
+    "fname": "M3T20090417T021417_V01_RFL",
+    "verdict": "PASS",
+    "npy": "D:\\M3 Journal\\Bullialdus Crater\\Pipeline_outputs\\04_denoised\\M3T20090417T021417_V01_RFL_denoised.npy",
+    "elapsed": "0h 17m 2s"
+  },
+  {
+    "scene": "Copernicus Crater",
+    "fname": "M3G20090207T083836_V01_RFL",
+    "verdict": "PASS",
+    "npy": "D:\\M3 Journal\\Copernicus Crater\\Pipeline_outputs\\04_denoised\\M3G20090207T083836_V01_RFL_denoised.npy",
+    "elapsed": "0h 41m 9s"
+  },
+  {
+    "scene": "Jackson Crater",
+    "fname": "M3G20081225T074420_V01_RFL",
+    "verdict": "PASS",
+    "npy": "D:\\M3 Journal\\Jackson Crater\\Pipeline_outputs\\04_denoised\\M3G20081225T074420_V01_RFL_denoised.npy",
+    "elapsed": "0h 4m 46s"
+  },
+  {
+    "scene": "Lunar Highlands South",
+    "fname": "M3G20090205T153710_V01_RFL",
+    "verdict": "PASS",
+    "npy": "D:\\M3 Journal\\Lunar Highlands South\\Pipeline_outputs\\04_denoised\\M3G20090205T153710_V01_RFL_denoised.npy",
+    "elapsed": "0h 2m 59s"
+  },
+  {
+    "scene": "Mare Imbrium",
+    "fname": "M3G20090609T230815_V01_RFL",
+    "verdict": "PASS",
+    "npy": "D:\\M3 Journal\\Mare Imbrium\\Pipeline_outputs\\04_denoised\\M3G20090609T230815_V01_RFL_denoised.npy",
+    "elapsed": "0h 6m 5s"
+  },
+  {
+    "scene": "Mare Serenitatis",
+    "fname": "M3G20090204T113444_V01_RFL",
+    "verdict": "PASS",
+    "npy": "D:\\M3 Journal\\Mare Serenitatis\\Pipeline_outputs\\04_denoised\\M3G20090204T113444_V01_RFL_denoised.npy",
+    "elapsed": "0h 17m 5s"
+  },
+  {
+    "scene": "Mare Tranquillitatis",
+    "fname": "M3G20090203T160452_V01_RFL",
+    "verdict": "PASS",
+    "npy": "D:\\M3 Journal\\Mare Tranquillitatis\\Pipeline_outputs\\04_denoised\\M3G20090203T160452_V01_RFL_denoised.npy",
+    "elapsed": "0h 9m 14s"
+  }
+]

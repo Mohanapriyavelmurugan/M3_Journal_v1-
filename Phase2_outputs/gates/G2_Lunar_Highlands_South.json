@@ -1,0 +1,13 @@
+{
+  "gate": "G2_CR_SPM_sanity",
+  "scene": "Lunar Highlands South",
+  "pass": true,
+  "enabled_indices": [
+    "OLINDEX3",
+    "LCPINDEX2",
+    "HCPINDEX2",
+    "BD1250"
+  ],
+  "active_frac": 0.20787535976551752,
+  "reasons": []
+}

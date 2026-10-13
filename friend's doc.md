@@ -1,0 +1,66 @@
+CrossSpec: A Mission-Neutral Harmonization and Open-Set Mineral
+Classification Pipeline for Lunar, Martian, and Earth-Analog Hyperspectral Data
+Project status — journal expansion cycle (ISPRS / RSE / TGRS target)
+Prepared for review with Vaibhav Gupta and Gowtham Padmanabhan
+Abstract
+Hyperspectral mineral mapping across planetary missions is limited by instrument-specific calibration, atmospheric correction, and spectral sampling differences that prevent direct cross-mission transfer of trained classifiers. This project, CrossSpec, develops a six-stage pipeline — harmonization, domain adaptation, in-mission classification, and an open-set gate with library-matching fallback — spanning the Moon Mineralogy Mapper (M3), the Compact Reconnaissance Imaging Spectrometer for Mars (CRISM), and the Earth-analog PRISMA instrument. This work substantially upgrades an earlier conference-stage version of the pipeline into a journal-ready system, targeting the ISPRS Journal of Photogrammetry and Remote Sensing, Remote Sensing of Environment, or IEEE Transactions on Geoscience and Remote Sensing. A foundational audit of the expanded pipeline identified several methodological rigor gaps — label circularity, silent preprocessing bugs, and an unbuilt open-set stage — all of which have since been diagnosed and, where fixable, corrected: a 6.55× PRISMA scale error was found and repaired, mask-persistence and interpolation bugs were resolved, and the mineral taxonomy was rebuilt on corrected physics (v6). The open-set gate and spectral-library fallback (Stage 5), previously unbuilt, is now implemented and calibrated. Remaining work — acquiring independent ground truth, and finalizing the cross-mission transfer scope — is reported transparently, and the current state of the pipeline is assessed against the readiness bar for the target venues.
+1. Introduction
+Cross-mission hyperspectral mineral mapping asks whether a classifier trained on one instrument's data can generalize to another — across the Moon, Mars, and Earth-analog sites — despite each instrument having different band sampling, atmospheric/photometric correction, and noise characteristics. An earlier, conference-stage version of CrossSpec proposed a six-stage pipeline for this problem and demonstrated strong in-mission accuracy (SVM OA 96.7% on CRISM). This journal expansion substantially strengthens that foundation: cross-mission transfer claims are now grounded in real mineral labels rather than cluster identity, the harmonization stage has been corrected of several preprocessing issues, and a previously unbuilt open-set recognition stage has been fully implemented and calibrated — moving the pipeline from a conference-scope demonstration toward the rigor expected at ISPRS / RSE / TGRS.
+Every stage of the pipeline was re-audited against real pixel data rather than assumed correct, and every improvement or reframing applied in this document is backed by a diagnostic report, not a description alone. Where a limitation could not yet be resolved, it is stated plainly as ongoing work rather than implied to be complete.
+2. Related Work
+2.1 Cross-instrument harmonization
+Cross-sensor studies typically resolve differing spectral response functions via radiometric cross-calibration (simultaneous nadir overpasses, pseudo-invariant calibration sites) or model-based spectral band adjustment (Chander et al., 2013; Mizuochi et al., 2020; Obata, 2019). For M3 specifically, Isaacson et al. (2013) documented a thermally-induced spectral distortion requiring a laboratory-derived correction factor — illustrating that even single-instrument "corrected" products can carry residual, uncharacterized artifacts, a concern directly relevant to this project's own audit of M3/CRISM/PRISMA correction products.
+2.2 Cross-domain classification and transfer learning
+Unsupervised domain adaptation aligns a labeled source and unlabeled target distribution, historically via second-order statistics (Deep CORAL; Sun & Saenko, 2016) and more recently via Optimal Transport (Courty et al., 2017) and graph-based joint alignment (Wang et al., 2021). A recurring limitation across this literature is negative transfer when source and target classes do not fully overlap, motivating partial/unbalanced OT variants (Chen et al., 2025) and confidence-based pseudo-label pruning (Confident Learning, 2022) — both directly relevant to this project's finding that most CrossSpec class pairs across missions share no common mineral concept.
+2.3 Open-set recognition
+Closed-set classifiers force every test pixel into a known class, which is unsafe when a mission encounters unmapped mineralogy. Dhoundiyal et al. (2025) apply Extreme Value Theory with Weibull-calibrated ensemble SVMs on CRISM to reject out-of-library pixels (κ 0.89); Plebani et al. (2022) note that even strong CRISM classifiers systematically misassign unknown phases to the nearest trained class absent such a gate. This is the direct motivation for CrossSpec's Stage 5.
+2.4 Planetary vs. Earth-analog spectral matching
+Spectral Angle Mapping against reference libraries (USGS, RELAB, MICA) is standard for mineral identification, but is known to be sensitive to instrument smile, wavelength drift, and — most relevant here — the dilution of diagnostic absorption features when matching is performed over the full spectral range rather than the physically diagnostic window (McGuire et al., 2009; Itoh & Parente, 2020; Grindrod et al., 2022). This project's own experiments (Section 4) independently reproduce this exact effect.
+2.5 Identified gap
+No existing pipeline unifies physically-grounded cross-sensor harmonization with an adaptive, open-set classifier across a lunar, Martian, and Earth-analog instrument simultaneously. CrossSpec targets this gap; this document reports what has been achieved toward it and what remains open.
+3. Methodology — current pipeline
+3.1 Stages 1–2: Harmonization
+Each mission's spectra are resampled onto a common 206-band grid (PCHIP interpolation, replacing an earlier CubicSpline approach not supported for gap-bridging of this width by the interpolation literature). Water/CO2 absorption windows are masked and, critically, re-nulled after interpolation so gaps are never filled with fabricated continuum. A silent 6.55× PRISMA reflectance scale error — previously discarding 44–62% of arid-scene pixels — was identified and corrected. Masked bands are preserved as an explicit missingness channel at model input rather than silently zero-filled.
+3.2 Stage 3: Domain adaptation
+Cross-mission alignment (CORAL, Sinkhorn Optimal Transport) is evaluated against real mineral labels rather than unsupervised cluster identity. Only one mineral concept is genuinely shared across missions — mafic silicate material, present in both M3 (mare_basalt) and CRISM (mafic_olivine_pyroxene). This pairing is reported as an honest, secondary illustration of cross-mission transfer; it is not positioned as the paper's central contribution.
+3.3 Stage 4: In-mission classification
+A 1-D CNN, SVM, and Random Forest are trained per mission under scene-holdout. Because target labels derive from KMeans clustering of the same pixels used as classifier input, results are reported as pseudo-label recoverability under scene-holdout, not as classification accuracy against independent ground truth — a direct response to the circularity concern raised at the conference stage.
+3.4 Stage 5: Open-set gate and library fallback
+A leave-one-class-out protocol (9 folds across 3 missions × 3 classes) calibrates a confidence gate (softmax confidence and feature-space centroid distance) to flag pixels resembling no trained class. A native-band, NaN-aware Spectral Angle Mapper then reports the closest-matching reference mineral for gated pixels, scoped explicitly as supplementary qualitative evidence rather than a second classifier.
+3.5 Small-bodies qualitative vignette
+As a fallback-layer demonstration only, spectra from Bennu (OVIRS), Ryugu (NIRS3), Vesta, and Ceres (Dawn VIR) were acquired and passed through the SAM fallback — never through the full classification pipeline, and never scored for accuracy.
+4. Results achieved
+4.1 Final taxonomy (v6)
+Mission	Final classes used for training/LOCO	Notes
+M3	mare_basalt, pyroclastic_deposits, polar_psr_edge	highland_anorthosite / crater_floor_peak excluded (data-driven)
+CRISM	mafic_olivine_pyroxene, carbonate_bearing, low_signal_control	phyllosilicate_rich excluded (17 px, not real); 1 real singleton sulfate scene kept qualitative-only
+PRISMA	arid_evaporite, hydrothermal_alteration, vegetated_temperate	all three usable; 1 real singleton mafic scene kept qualitative-only
+
+4.2 Stage 4 — pseudo-label recoverability (CNN, scene-holdout)
+Mission	OA (%)	κ	Note
+CRISM	88.9 ± 7.3	0.83	Clean result
+PRISMA	95.8 ± 5.5	0.93	Clean result
+M3	99.99 ± 0.01	0.08	Degenerate — majority-class collapse, reported as such, not a result
+
+4.3 Stage 3 — the one honest cross-mission pair
+CRISM → M3 (CORAL alignment), mafic-vs-other: overall accuracy 90.5%, average accuracy 82.1%, κ 0.59. The reverse direction (M3→CRISM) and all PRISMA pairs do not produce a defensible result and are reported as such rather than omitted.
+4.4 Stage 5 — open-set gate
+Six of nine leave-one-class-out folds achieve strong separation (AUROC 0.89–0.99: mafic, arid, hydrothermal, polar, pyroclastic, mare). Three folds (carbonate, vegetated, low-signal) are reported with an unbiased, non-overfit threshold rather than the more favorable but circular alternative — vegetated improved from AUROC 0.70 to 0.84 after a fold-construction fix; low-signal remains a gate-only, non-recoverable class by design.
+4.5 Small-bodies vignette — two real results
+Restricting Spectral Angle Matching to the diagnostic 0.7–2.5 µm pyroxene window (rather than the full spectrum) recovers real HED meteorite matches for Vesta in 99.9% of sampled pixels — full-spectrum matching had failed entirely. Ceres shows a genuine match in its 2.7–3.1 µm diagnostic window (mean angle ~0.07 rad). This independently confirms, in a second dataset, the project's recurring finding that diagnostic-band-restricted comparison recovers signal that whole-spectrum comparison destroys.
+5. Target venues and current readiness
+The primary submission targets, in order of fit, are the ISPRS Journal of Photogrammetry and Remote Sensing, Remote Sensing of Environment, and IEEE Transactions on Geoscience and Remote Sensing, with Computers & Geosciences or ESWA as secondary options. Each of these venues expects, at minimum: quantitative open-set evaluation, a clearly scoped and honestly caveated cross-mission claim, and results that do not overstate what the underlying labels can support.
+Requirement	Status
+Corrected, verified harmonization pipeline	Met — P1 fixes verified, taxonomy rebuilt (v6)
+Quantitative open-set evaluation (Stage 5)	Met — 9/9 LOCO folds characterized, 6 strong
+Cross-mission transfer claim, honestly scoped	Partially met — one real pair (CRISM↔M3 mafic); broader claim not supported by evidence and is not being made
+Independent ground truth / external validation	Open — in progress, see below
+Full manuscript draft	Not yet started — pending the two open items below
+
+6. Current work and open items
+•Independent ground truth: attempts using Apollo/Chang'e landing-site overlap (M3) and USGS Tetracorder mineral maps at Cuprite, NV (PRISMA) have not yet produced a usable independent validation set; the physical/access reasons for each are documented and a next acquisition step is identified for Cuprite.
+•M3 taxonomy ceiling: highland and mare/pyroclastic material are confirmed to genuinely overlap in native spectral feature space at this resolution (not a preprocessing artifact) — this is treated as a stated limitation rather than a target for further unsupervised-clustering attempts.
+•Harmonization architecture choice: a native-band feature pipeline recovers some classes the shared-grid pipeline's masking removed, but is not yet confirmed superior end-to-end; this decision is pending and will determine the final Stage 1–2 design reported in the manuscript.
+•Manuscript drafting: prose for the Methods and Results sections has not yet been written; this document is the evidence base for that drafting, to begin once the harmonization architecture decision above is closed.
+7. Summary
+This cycle upgraded CrossSpec from a conference-scope demonstration into a pipeline whose claims have each been tested against direct attempts to break them. What is reported as solid — the corrected harmonization fixes, taxonomy v6, the one honest cross-mission pair, the working open-set gate, and two independently-verified small-bodies results — is ready to be written up. What remains open — independent ground truth and the final harmonization architecture — are identified as specific, scoped decisions rather than unresolved uncertainty, and are the two items standing between the current pipeline and a journal-ready submission at the target venues.

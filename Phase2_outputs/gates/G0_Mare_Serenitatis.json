@@ -1,0 +1,8 @@
+{
+  "gate": "G0_Scene_READY",
+  "scene": "Mare Serenitatis",
+  "pass": true,
+  "reasons": [],
+  "fname": "M3G20090204T113444_V01_RFL",
+  "denoised": "D:\\Journal\\M3 Journal\\Mare Serenitatis\\Pipeline_outputs\\04_denoised\\M3G20090204T113444_V01_RFL_denoised.npy"
+}

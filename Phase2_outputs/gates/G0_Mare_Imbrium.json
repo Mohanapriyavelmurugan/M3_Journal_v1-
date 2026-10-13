@@ -1,0 +1,8 @@
+{
+  "gate": "G0_Scene_READY",
+  "scene": "Mare Imbrium",
+  "pass": true,
+  "reasons": [],
+  "fname": "M3G20090609T230815_V01_RFL",
+  "denoised": "D:\\Journal\\M3 Journal\\Mare Imbrium\\Pipeline_outputs\\04_denoised\\M3G20090609T230815_V01_RFL_denoised.npy"
+}

@@ -1,0 +1,63 @@
+{
+  "scene": "Mare Imbrium",
+  "method_version": "depth_v2g_clusters",
+  "candidates": {
+    "Ilmenite": {
+      "n_sam_hits_gated": 233,
+      "status": "PRESENT_RARE",
+      "terrain": "mare",
+      "spatial_max_cell": 13,
+      "spatial_ok": true,
+      "mare_only_present_rare": true,
+      "requires": "SAM + d1.00>=0.015 + hmb>=0.01 (n>=120, terrain=mare, spatial_cell>=8, PRESENT_RARE mare-only)",
+      "examples": [
+        {
+          "y": 615,
+          "x": 223,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.026661546647427464,
+          "d1.00": 0.049356006593417656,
+          "hmb": 0.023146917956500257
+        },
+        {
+          "y": 10420,
+          "x": 259,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.02431070528566594,
+          "d1.00": 0.03832850892354511,
+          "hmb": 0.012119420286627713
+        },
+        {
+          "y": 1148,
+          "x": 9,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.03293172831365265,
+          "d1.00": 0.06064595086224445,
+          "hmb": 0.03443686222532705
+        },
+        {
+          "y": 393,
+          "x": 144,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.028172995888282693,
+          "d1.00": 0.03996983810756305,
+          "hmb": 0.01376074947064565
+        },
+        {
+          "y": 10867,
+          "x": 159,
+          "library": "USGS_s07_M3t_Ilmenite_HS231.3B_ASDFRb_AREF",
+          "sam": 0.028505183966753847,
+          "d1.00": 0.039312801635533745,
+          "hmb": 0.013103712998616346
+        }
+      ]
+    },
+    "Spinel": {
+      "n_sam_hits": 0,
+      "status": "ABSENT",
+      "requires": "SAM only (no dedicated SPM yet) \u2014 not PRESENT_RARE",
+      "examples": []
+    }
+  }
+}

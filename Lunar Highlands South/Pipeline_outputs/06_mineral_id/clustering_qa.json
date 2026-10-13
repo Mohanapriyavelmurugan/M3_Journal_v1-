@@ -1,0 +1,18 @@
+{
+  "mcs": 25,
+  "method": "eom",
+  "score": 9.233229635282635,
+  "n": 2,
+  "noise": 0.03733843944471039,
+  "dominance": 0.9947289905519642,
+  "pass": true,
+  "sizes": [
+    10002,
+    53
+  ],
+  "name_channels": [
+    "LCPINDEX2",
+    "HCPINDEX2",
+    "BD1250"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "gate": "G2_CR_SPM_sanity",
+  "scene": "Mare Imbrium",
+  "pass": true,
+  "enabled_indices": [
+    "OLINDEX3",
+    "LCPINDEX2",
+    "HCPINDEX2",
+    "BD1250"
+  ],
+  "active_frac": 0.28594868935120205,
+  "reasons": []
+}
